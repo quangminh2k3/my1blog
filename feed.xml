@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <title>MyBlog</title>
+    <link href="https://github.com/quangminh2k3/my1blog.git/feed.xml" rel="self" />
+    <link href="https://github.com/quangminh2k3/my1blog.git" />
+    <updated>2024-12-25T22:00:27+07:00</updated>
+    <author>
+        <name>Lâm Quang Minh</name>
+    </author>
+    <id>https://github.com/quangminh2k3/my1blog.git</id>
+
+    <entry>
+        <title>Blog 2</title>
+        <author>
+            <name>Lâm Quang Minh</name>
+        </author>
+        <link href="https://github.com/quangminh2k3/my1blog.git/blog-2.html"/>
+        <id>https://github.com/quangminh2k3/my1blog.git/blog-2.html</id>
+
+        <updated>2024-12-25T22:00:27+07:00</updated>
+            <summary>
+                <![CDATA[
+                    vưevwevwevewvwes ewvwevwevwevwe
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>vưevwevwevewvwes</p>
+<p>ewvwevwevwevwe</p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Blog 01_</title>
+        <author>
+            <name>Lâm Quang Minh</name>
+        </author>
+        <link href="https://github.com/quangminh2k3/my1blog.git/blog-01_.html"/>
+        <id>https://github.com/quangminh2k3/my1blog.git/blog-01_.html</id>
+
+        <updated>2024-12-25T21:51:49+07:00</updated>
+            <summary>
+                <![CDATA[
+                    ewngkenwiobniegips woiehgi ob4wygu b34
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>ewngkenwiobniegips woiehgi ob4wygu b34</p>
+            ]]>
+        </content>
+    </entry>
+</feed>

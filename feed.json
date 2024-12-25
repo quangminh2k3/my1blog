@@ -1,0 +1,41 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "MyBlog",
+    "description": "",
+    "home_page_url": "https://github.com/quangminh2k3/my1blog.git",
+    "feed_url": "https://github.com/quangminh2k3/my1blog.git/feed.json",
+    "user_comment": "",
+    "author": {
+        "name": "Lâm Quang Minh"
+    },
+    "items": [
+        {
+            "id": "https://github.com/quangminh2k3/my1blog.git/blog-2.html",
+            "url": "https://github.com/quangminh2k3/my1blog.git/blog-2.html",
+            "title": "Blog 2",
+            "summary": "vưevwevwevewvwes ewvwevwevwevwe",
+            "content_html": "<p>vưevwevwevewvwes</p>\n<p>ewvwevwevwevwe</p>",
+            "author": {
+                "name": "Lâm Quang Minh"
+            },
+            "tags": [
+            ],
+            "date_published": "2024-12-25T22:00:27+07:00",
+            "date_modified": "2024-12-25T22:00:27+07:00"
+        },
+        {
+            "id": "https://github.com/quangminh2k3/my1blog.git/blog-01_.html",
+            "url": "https://github.com/quangminh2k3/my1blog.git/blog-01_.html",
+            "title": "Blog 01_",
+            "summary": "ewngkenwiobniegips woiehgi ob4wygu b34",
+            "content_html": "<p>ewngkenwiobniegips woiehgi ob4wygu b34</p>",
+            "author": {
+                "name": "Lâm Quang Minh"
+            },
+            "tags": [
+            ],
+            "date_published": "2024-12-25T21:51:49+07:00",
+            "date_modified": "2024-12-25T21:58:52+07:00"
+        }
+    ]
+}
