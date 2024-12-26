@@ -3,85 +3,14 @@
     <title>MyBlog</title>
     <link href="https://github.com/quangminh2k3/my1blog.git/feed.xml" rel="self" />
     <link href="https://github.com/quangminh2k3/my1blog.git" />
-    <updated>2024-12-26T10:50:19+07:00</updated>
+    <updated>2024-12-26T12:25:26+07:00</updated>
     <author>
         <name>Lâm Quang Minh</name>
     </author>
     <id>https://github.com/quangminh2k3/my1blog.git</id>
 
     <entry>
-        <title>Blog 2</title>
-        <author>
-            <name>Lâm Quang Minh</name>
-        </author>
-        <link href="https://github.com/quangminh2k3/my1blog.git/blog-2.html"/>
-        <id>https://github.com/quangminh2k3/my1blog.git/blog-2.html</id>
-
-        <updated>2024-12-25T22:00:27+07:00</updated>
-            <summary>
-                <![CDATA[
-                    Giới thiệu bản thân © 2024 - Blog cá nhân của tôi
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <h1>Giới thiệu bản thân</h1>
-<div id="content"></div>
-<footer>© 2024 - Blog cá nhân của tôi</footer>
-<p>
-<script>
-    // Nội dung các phần
-    const content = [
-      {
-        title: "Giới thiệu bản thân",
-        text: `
-          Xin chào các bạn,  
-          Tôi tên là <b>[Lâm Quang Minh]</b>, hiện tại tôi đang là một sinh viên năm cuối trường Đại học Công nghệ thành phố Hồ Chí Minh. Tôi thích tìm hiểu về công nghệ thông tin. 
-          Từ nhỏ, tôi đã có một niềm yêu thích đặc biệt với các thiết bị công nghệ, đặc biệt là máy tính. 
-          Những lần được tiếp xúc với các phần mềm, trò chơi, hay các trang web đầu tiên đã để lại trong tôi một sự tò mò mãnh liệt: Làm thế nào để tạo ra được những thứ tuyệt vời như vậy?`
-      },
-      {
-        title: "Lý do học lập trình mạng",
-        text: `
-          Tôi học lập trình mạng vì tôi muốn hiểu rõ cách mà các hệ thống giao tiếp với nhau, từ những giao thức cơ bản như HTTP, TCP/IP cho đến việc triển khai các ứng dụng mạng thực tế. 
-          Tôi hy vọng rằng, với kiến thức về lập trình mạng, tôi có thể tham gia vào việc xây dựng những ứng dụng có tính kết nối cao, giúp cải thiện cuộc sống của mọi người.`
-      },
-      {
-        title: "Lý do học JavaScript",
-        text: `
-          JavaScript là công cụ mạnh mẽ để hiện thực hóa các ý tưởng trên nền tảng web. Từ khi bắt đầu học lập trình, tôi đã nhận ra rằng JavaScript không chỉ là ngôn ngữ phổ biến mà còn là chìa khóa để tạo ra những trải nghiệm người dùng sống động và tương tác. 
-          Với các thư viện và framework như React, Node.js, tôi tin rằng JavaScript sẽ mở ra nhiều cơ hội sáng tạo mới cho tôi.`
-      },
-      {
-        title: "Mục tiêu và ước mơ",
-        text: `
-          Tôi mong muốn sử dụng những kiến thức mình học được để tạo ra các sản phẩm công nghệ hữu ích, giải quyết các vấn đề trong cuộc sống và mang lại giá trị cho cộng đồng.`
-      }
-    ];
-
-    // Hiển thị nội dung
-    const contentDiv = document.getElementById("content");
-    content.forEach(section => {
-      const sectionDiv = document.createElement("div");
-      sectionDiv.classList.add("section");
-
-      const title = document.createElement("h2");
-      title.innerText = section.title;
-
-      const text = document.createElement("p");
-      text.innerHTML = section.text;
-
-      sectionDiv.appendChild(title);
-      sectionDiv.appendChild(text);
-      contentDiv.appendChild(sectionDiv);
-    });
-  </script>
-</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Blog 01_</title>
+        <title>Blog 01_ Tôi đã học lập trình web như thế nào?</title>
         <author>
             <name>Lâm Quang Minh</name>
         </author>
@@ -91,12 +20,97 @@
         <updated>2024-12-25T21:51:49+07:00</updated>
             <summary>
                 <![CDATA[
-                    wevwebews
+                    Giới Thiệu Bản Thân Xin chào! Tôi là Lâm Quang Minh, sinh năm 2003 và hiện là sinh viên năm cuối tại trường Đại học Công nghệ TP.HCM (HUTECH). Trong hành trình học tập tại HUTECH, tôi đã có cơ hội khám phá và đam&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <p>wevwebews<br><br></p>
+                <h2 data-pm-slice="1 1 []">Giới Thiệu Bản Thân</h2>
+<p>Xin chào! Tôi là <strong>Lâm Quang Minh</strong>, sinh năm 2003 và hiện là sinh viên năm cuối tại trường Đại học Công nghệ TP.HCM (HUTECH). Trong hành trình học tập tại HUTECH, tôi đã có cơ hội khám phá và đam mê lập trình mạng, một lĩnh vực đầy thách thức nhưng cũng rất thú vị. Bài viết này, tôi muốn chia sẻ về hành trình học tập và những kinh nghiệm quý báu mà tôi đã tích lũy được.</p>
+<div><hr></div>
+<h2>Hành Trình Học Lập Trình Mạng</h2>
+<h3>1. Khởi Đầu Với Sự Tò Mò</h3>
+<p>Ngay từ những ngày đầu học ngành Công nghệ Thông tin, tôi đã bị cuốn hút bởi cách các thiết bị kết nối với nhau qua mạng. Từ những bài học cơ bản về giao thức mạng, tôi bắt đầu tìm hiểu thêm về cách dữ liệu được truyền tải và bảo mật trong thế giới số. Sự tò mò này đã trở thành động lực giúp tôi đi sâu hơn vào lĩnh vực lập trình mạng.</p>
+<figure class="post__image align-center">                           <img loading="lazy"  src="https://github.com/quangminh2k3/my1blog.git/media/posts/1/istockphoto-1309893470-612x612-2.jpg" alt="" width="462" height="375" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://github.com/quangminh2k3/my1blog.git/media/posts/1/responsive/istockphoto-1309893470-612x612-2-xs.jpg 640w ,https://github.com/quangminh2k3/my1blog.git/media/posts/1/responsive/istockphoto-1309893470-612x612-2-sm.jpg 768w ,https://github.com/quangminh2k3/my1blog.git/media/posts/1/responsive/istockphoto-1309893470-612x612-2-md.jpg 1024w ,https://github.com/quangminh2k3/my1blog.git/media/posts/1/responsive/istockphoto-1309893470-612x612-2-lg.jpg 1366w ,https://github.com/quangminh2k3/my1blog.git/media/posts/1/responsive/istockphoto-1309893470-612x612-2-xl.jpg 1600w ,https://github.com/quangminh2k3/my1blog.git/media/posts/1/responsive/istockphoto-1309893470-612x612-2-2xl.jpg 1920w"></figure>
+<h3>2. Những Bước Đầu Tiên</h3>
+<p>Hành trình học lập trình mạng bắt đầu bằng việc nắm vững các kiến thức nền tảng:</p>
+<ul data-spread="false">
+<li>
+<p><strong>Mạng máy tính cơ bản</strong>: Hiểu cách hoạt động của giao thức TCP/IP, DNS, HTTP/HTTPS.</p>
+</li>
+<li>
+<p><strong>Lập trình socket</strong>: Đây là một kỹ năng quan trọng. Tôi đã thực hành viết các ứng dụng đơn giản như chat server/client bằng Python.</p>
+</li>
+<li>
+<p><strong>Bảo mật mạng</strong>: Tôi tìm hiểu về các lỗ hổng bảo mật phổ biến và cách phòng chống như mã hóa dữ liệu và sử dụng tường lửa.</p>
+</li>
+</ul>
+<h3>3. Học Qua Dự Án Thực Tế</h3>
+<p>Để củng cố kiến thức, tôi tham gia nhiều dự án nhỏ:</p>
+<ul data-spread="false">
+<li>
+<p><strong>Phân tích gói tin mạng</strong>: Tôi tìm hiểu cách dữ liệu được truyền trên mạng.</p>
+</li>
+<li>
+<p><strong>Mô phỏng VPN</strong>: Tôi đã thực hiện một bài tập lớn về VPN để hiểu rõ cách dữ liệu được bảo mật khi truyền tải qua mạng.</p>
+</li>
+</ul>
+<h3>4. Tài Liệu Học Tập và Công Cụ Hỗ Trợ</h3>
+<ul data-spread="false">
+<li>
+<p><strong>Sách và khóa học online</strong>:</p>
+<ul data-spread="false">
+<li>
+<p><em>Computer Networking: Principles, Protocols, and Practice</em> của Olivier Bonaventure.</p>
+</li>
+<li>
+<p>Các khóa học trên Udemy và Coursera.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Công cụ thực hành</strong>:</p>
+<ul data-spread="false">
+<li>
+<p>Wireshark: Phân tích gói tin mạng.</p>
+</li>
+<li>
+<p>Cisco Packet Tracer: Mô phỏng mạng máy tính.</p>
+</li>
+<li>
+<p>VirtualBox: Cài đặt và kiểm thử mạng ảo.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>5. Bài Học Kinh Nghiệm</h3>
+<ul data-spread="false">
+<li>
+<p><strong>Tư duy hệ thống</strong>: Lập trình mạng không chỉ là viết mã mà còn cần hiểu cách các thành phần phối hợp với nhau.</p>
+</li>
+<li>
+<p><strong>Không ngừng thực hành</strong>: Thực hành liên tục giúp tôi hiểu rõ và áp dụng kiến thức vào thực tế.</p>
+</li>
+<li>
+<p><strong>Tìm cộng đồng</strong>: Tham gia các diễn đàn như Stack Overflow, GitHub và nhóm học tập trong trường giúp tôi học hỏi từ những người đi trước.</p>
+</li>
+</ul>
+<div><hr></div>
+<h2>Định Hướng Tương Lai</h2>
+<p>Trong tương lai, tôi dự định sẽ:</p>
+<ul data-spread="false">
+<li>
+<p>Học sâu hơn về <strong>Cloud Networking</strong> và<strong> mạng máy tính</strong>.</p>
+</li>
+<li>
+<p>Xây dựng các dự án thực tế như hệ thống quản lý mạng cho doanh nghiệp.</p>
+</li>
+<li>
+<p>Chia sẻ kiến thức và giúp đỡ các bạn trẻ đam mê lĩnh vực này.</p>
+</li>
+</ul>
+<div><hr></div>
+<p>Cảm ơn bạn đã đọc bài viết! Nếu bạn có cùng sở thích hoặc muốn trao đổi thêm về lập trình mạng, đừng ngần ngại liên hệ với tôi. Hành trình của chúng ta sẽ trở nên thú vị hơn khi có những người bạn đồng hành!</p>
             ]]>
         </content>
     </entry>
