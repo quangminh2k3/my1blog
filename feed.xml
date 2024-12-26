@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
     <title>MyBlog</title>
-    <link href="https://quangminh2k3.github.io/my1blog/feed.xml" rel="self" />
-    <link href="https://quangminh2k3.github.io/my1blog" />
+    <link href="https://quangminhk2k3.github.io/my1blog/feed.xml" rel="self" />
+    <link href="https://quangminhk2k3.github.io/my1blog" />
     <updated>2024-12-26T12:43:57+07:00</updated>
     <author>
         <name>Lâm Quang Minh</name>
     </author>
-    <id>https://quangminh2k3.github.io/my1blog</id>
+    <id>https://quangminhk2k3.github.io/my1blog</id>
 
     <entry>
         <title>Blog 01_ Tôi đã học lập trình web như thế nào?</title>
         <author>
             <name>Lâm Quang Minh</name>
         </author>
-        <link href="https://quangminh2k3.github.io/my1blog/blog-01_.html"/>
-        <id>https://quangminh2k3.github.io/my1blog/blog-01_.html</id>
+        <link href="https://quangminhk2k3.github.io/my1blog/blog-01_.html"/>
+        <id>https://quangminhk2k3.github.io/my1blog/blog-01_.html</id>
 
         <updated>2024-12-25T21:51:49+07:00</updated>
             <summary>
@@ -31,7 +31,7 @@
 <h2>Hành Trình Học Lập Trình Mạng</h2>
 <h3>1. Khởi Đầu Với Sự Tò Mò</h3>
 <p>Ngay từ những ngày đầu học ngành Công nghệ Thông tin, tôi đã bị cuốn hút bởi cách các thiết bị kết nối với nhau qua mạng. Từ những bài học cơ bản về giao thức mạng, tôi bắt đầu tìm hiểu thêm về cách dữ liệu được truyền tải và bảo mật trong thế giới số. Sự tò mò này đã trở thành động lực giúp tôi đi sâu hơn vào lĩnh vực lập trình mạng.</p>
-<figure class="post__image align-center">                           <img loading="lazy"  src="https://quangminh2k3.github.io/my1blog/media/posts/1/istockphoto-1309893470-612x612-2.jpg" alt="" width="462" height="375" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://quangminh2k3.github.io/my1blog/media/posts/1/responsive/istockphoto-1309893470-612x612-2-xs.jpg 640w ,https://quangminh2k3.github.io/my1blog/media/posts/1/responsive/istockphoto-1309893470-612x612-2-sm.jpg 768w ,https://quangminh2k3.github.io/my1blog/media/posts/1/responsive/istockphoto-1309893470-612x612-2-md.jpg 1024w ,https://quangminh2k3.github.io/my1blog/media/posts/1/responsive/istockphoto-1309893470-612x612-2-lg.jpg 1366w ,https://quangminh2k3.github.io/my1blog/media/posts/1/responsive/istockphoto-1309893470-612x612-2-xl.jpg 1600w ,https://quangminh2k3.github.io/my1blog/media/posts/1/responsive/istockphoto-1309893470-612x612-2-2xl.jpg 1920w"></figure>
+<figure class="post__image align-center">                           <img loading="lazy"  src="https://quangminhk2k3.github.io/my1blog/media/posts/1/istockphoto-1309893470-612x612-2.jpg" alt="" width="462" height="375" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://quangminhk2k3.github.io/my1blog/media/posts/1/responsive/istockphoto-1309893470-612x612-2-xs.jpg 640w ,https://quangminhk2k3.github.io/my1blog/media/posts/1/responsive/istockphoto-1309893470-612x612-2-sm.jpg 768w ,https://quangminhk2k3.github.io/my1blog/media/posts/1/responsive/istockphoto-1309893470-612x612-2-md.jpg 1024w ,https://quangminhk2k3.github.io/my1blog/media/posts/1/responsive/istockphoto-1309893470-612x612-2-lg.jpg 1366w ,https://quangminhk2k3.github.io/my1blog/media/posts/1/responsive/istockphoto-1309893470-612x612-2-xl.jpg 1600w ,https://quangminhk2k3.github.io/my1blog/media/posts/1/responsive/istockphoto-1309893470-612x612-2-2xl.jpg 1920w"></figure>
 <h3>2. Những Bước Đầu Tiên</h3>
 <p>Hành trình học lập trình mạng bắt đầu bằng việc nắm vững các kiến thức nền tảng:</p>
 <ul data-spread="false">
