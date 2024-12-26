@@ -1,36 +1,130 @@
-<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Blog 04_ Lập trình đa tuyến - MyBlog</title><meta name="description" content="Tổng Quan Về Lập Trình Mạng 1. Lập Trình Mạng Là Gì? Lập trình mạng là quá trình xây dựng các ứng dụng phần mềm có khả năng giao tiếp và truyền dữ liệu qua mạng máy tính. Nó cho phép các thiết bị khác&hellip;"><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="canonical" href="https://github.com/quangminh2k3/my1blog.git/blog-04_-lap-trinh-da-tuyen.html"><link rel="alternate" type="application/atom+xml" href="https://github.com/quangminh2k3/my1blog.git/feed.xml"><link rel="alternate" type="application/json" href="https://github.com/quangminh2k3/my1blog.git/feed.json"><meta property="og:title" content="Blog 04_ Lập trình đa tuyến"><meta property="og:image" content="https://github.com/quangminh2k3/my1blog.git/media/website/concept-construction-page-site.jpg"><meta property="og:image:width" content="910"><meta property="og:image:height" content="501"><meta property="og:site_name" content="MyBlog"><meta property="og:description" content="Tổng Quan Về Lập Trình Mạng 1. Lập Trình Mạng Là Gì? Lập trình mạng là quá trình xây dựng các ứng dụng phần mềm có khả năng giao tiếp và truyền dữ liệu qua mạng máy tính. Nó cho phép các thiết bị khác&hellip;"><meta property="og:url" content="https://github.com/quangminh2k3/my1blog.git/blog-04_-lap-trinh-da-tuyen.html"><meta property="og:type" content="article"><link rel="stylesheet" href="https://github.com/quangminh2k3/my1blog.git/assets/css/style.css?v=94220f119044674b7663d7c550454968"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://github.com/quangminh2k3/my1blog.git/blog-04_-lap-trinh-da-tuyen.html"},"headline":"Blog 04_ Lập trình đa tuyến","datePublished":"2024-12-26T13:19+07:00","dateModified":"2024-12-26T13:19+07:00","image":{"@type":"ImageObject","url":"https://github.com/quangminh2k3/my1blog.git/media/website/concept-construction-page-site.jpg","height":501,"width":910},"description":"Tổng Quan Về Lập Trình Mạng 1. Lập Trình Mạng Là Gì? Lập trình mạng là quá trình xây dựng các ứng dụng phần mềm có khả năng giao tiếp và truyền dữ liệu qua mạng máy tính. Nó cho phép các thiết bị khác&hellip;","author":{"@type":"Person","name":"Lâm Quang Minh","url":"https://github.com/quangminh2k3/my1blog.git/authors/lam-quang-minh/"},"publisher":{"@type":"Organization","name":"Lâm Quang Minh","logo":{"@type":"ImageObject","url":"https://github.com/quangminh2k3/my1blog.git/media/website/concept-construction-page-site.jpg","height":501,"width":910}}}</script><noscript><style>img[loading] {
+<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Blog 04_ Lập trình đa tuyến - MyBlog</title><meta name="description" content="1. Giới Thiệu Về Lập Trình Đa Tuyến Lập trình đa tuyến (Multithreading) là kỹ thuật cho phép một chương trình thực thi nhiều luồng (threads) đồng thời để cải thiện hiệu suất và khả năng phản hồi. Mỗi luồng là một luồng điều khiển&hellip;"><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="canonical" href="https://github.com/quangminh2k3/my1blog.git/blog-04_-lap-trinh-da-tuyen.html"><link rel="alternate" type="application/atom+xml" href="https://github.com/quangminh2k3/my1blog.git/feed.xml"><link rel="alternate" type="application/json" href="https://github.com/quangminh2k3/my1blog.git/feed.json"><meta property="og:title" content="Blog 04_ Lập trình đa tuyến"><meta property="og:image" content="https://github.com/quangminh2k3/my1blog.git/media/website/concept-construction-page-site.jpg"><meta property="og:image:width" content="910"><meta property="og:image:height" content="501"><meta property="og:site_name" content="MyBlog"><meta property="og:description" content="1. Giới Thiệu Về Lập Trình Đa Tuyến Lập trình đa tuyến (Multithreading) là kỹ thuật cho phép một chương trình thực thi nhiều luồng (threads) đồng thời để cải thiện hiệu suất và khả năng phản hồi. Mỗi luồng là một luồng điều khiển&hellip;"><meta property="og:url" content="https://github.com/quangminh2k3/my1blog.git/blog-04_-lap-trinh-da-tuyen.html"><meta property="og:type" content="article"><link rel="stylesheet" href="https://github.com/quangminh2k3/my1blog.git/assets/css/style.css?v=94220f119044674b7663d7c550454968"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://github.com/quangminh2k3/my1blog.git/blog-04_-lap-trinh-da-tuyen.html"},"headline":"Blog 04_ Lập trình đa tuyến","datePublished":"2024-12-26T13:19+07:00","dateModified":"2024-12-26T13:39+07:00","image":{"@type":"ImageObject","url":"https://github.com/quangminh2k3/my1blog.git/media/website/concept-construction-page-site.jpg","height":501,"width":910},"description":"1. Giới Thiệu Về Lập Trình Đa Tuyến Lập trình đa tuyến (Multithreading) là kỹ thuật cho phép một chương trình thực thi nhiều luồng (threads) đồng thời để cải thiện hiệu suất và khả năng phản hồi. Mỗi luồng là một luồng điều khiển&hellip;","author":{"@type":"Person","name":"Lâm Quang Minh","url":"https://github.com/quangminh2k3/my1blog.git/authors/lam-quang-minh/"},"publisher":{"@type":"Organization","name":"Lâm Quang Minh","logo":{"@type":"ImageObject","url":"https://github.com/quangminh2k3/my1blog.git/media/website/concept-construction-page-site.jpg","height":501,"width":910}}}</script><noscript><style>img[loading] {
                     opacity: 1;
-                }</style></noscript></head><body class="post-template"><header class="top js-header"><a class="logo" href="https://github.com/quangminh2k3/my1blog.git/"><img src="https://github.com/quangminh2k3/my1blog.git/media/website/concept-construction-page-site.jpg" alt="MyBlog" width="910" height="501"></a></header><main class="post"><article class="content"><div class="hero hero--noimage"><header class="hero__content"><div class="wrapper"><h1>Blog 04_ Lập trình đa tuyến</h1><div class="feed__meta content__meta"><a href="https://github.com/quangminh2k3/my1blog.git/authors/lam-quang-minh/" class="feed__author">Lâm Quang Minh</a> <time datetime="2024-12-26T13:19" class="feed__date">tháng 12 26, 2024</time></div></div></header></div><div class="entry-wrapper content__entry"><h3>Tổng Quan Về Lập Trình Mạng</h3><h4>1. Lập Trình Mạng Là Gì?</h4><p>Lập trình mạng là quá trình xây dựng các ứng dụng phần mềm có khả năng giao tiếp và truyền dữ liệu qua mạng máy tính. Nó cho phép các thiết bị khác nhau kết nối và chia sẻ thông tin, từ đó tạo ra các hệ thống phân tán và ứng dụng web động.</p><p>Lập trình mạng sử dụng các giao thức truyền thông để đảm bảo dữ liệu được gửi và nhận đúng cách giữa các thiết bị. Nó là một phần quan trọng trong phát triển ứng dụng hiện đại như các ứng dụng web, trò chuyện trực tuyến, dịch vụ phát trực tuyến và IoT.</p><figure class="post__image">                <img loading="lazy" src="https://github.com/quangminh2k3/my1blog.git/media/posts/22/IMG_T5VHKSQYHV4VT8WB-3.png" alt="" width="1200" height="526" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://github.com/quangminh2k3/my1blog.git/media/posts/22/responsive/IMG_T5VHKSQYHV4VT8WB-3-xs.png 640w, https://github.com/quangminh2k3/my1blog.git/media/posts/22/responsive/IMG_T5VHKSQYHV4VT8WB-3-sm.png 768w, https://github.com/quangminh2k3/my1blog.git/media/posts/22/responsive/IMG_T5VHKSQYHV4VT8WB-3-md.png 1024w, https://github.com/quangminh2k3/my1blog.git/media/posts/22/responsive/IMG_T5VHKSQYHV4VT8WB-3-lg.png 1366w, https://github.com/quangminh2k3/my1blog.git/media/posts/22/responsive/IMG_T5VHKSQYHV4VT8WB-3-xl.png 1600w, https://github.com/quangminh2k3/my1blog.git/media/posts/22/responsive/IMG_T5VHKSQYHV4VT8WB-3-2xl.png 1920w">                       </figure><hr><h4>2. Vai Trò Của Ứng Dụng Mạng</h4><p>Ứng dụng mạng đóng vai trò then chốt trong việc kết nối người dùng và thiết bị. Dưới đây là một số vai trò quan trọng:</p><ul><li><strong>Trao Đổi Thông Tin:</strong> Hỗ trợ truyền dữ liệu giữa các thiết bị thông qua mạng nội bộ hoặc Internet.</li><li><strong>Giao Tiếp Theo Thời Gian Thực:</strong> Các ứng dụng như tin nhắn tức thời hoặc gọi video hoạt động theo cơ chế giao tiếp ngay lập tức.</li><li><strong>Chia Sẻ Tài Nguyên:</strong> Cho phép nhiều người dùng truy cập chung một tài nguyên, chẳng hạn như máy in, máy chủ hoặc cơ sở dữ liệu.</li><li><strong>Hỗ Trợ Thương Mại Điện Tử:</strong> Các hệ thống thanh toán trực tuyến và giỏ hàng điện tử giúp người dùng mua sắm qua mạng dễ dàng.</li><li><strong>Quản Lý Từ Xa:</strong> Điều khiển thiết bị và giám sát hệ thống từ xa thông qua mạng.</li></ul><hr><h4>3. Các Giao Thức Mạng Cơ Bản</h4><p>Giao thức mạng là tập hợp các quy tắc xác định cách thức trao đổi dữ liệu trên mạng. Một số giao thức phổ biến gồm:</p><p><strong>1. TCP/IP (Transmission Control Protocol/Internet Protocol):</strong></p><ul><li><strong>TCP</strong> đảm bảo dữ liệu được truyền tin cậy và theo đúng thứ tự.</li><li><strong>IP</strong> định tuyến dữ liệu từ nguồn đến đích thông qua địa chỉ IP.</li></ul><p><strong>2. HTTP/HTTPS (HyperText Transfer Protocol):</strong></p><ul><li>Được sử dụng để truyền siêu văn bản trên World Wide Web.</li><li><strong>HTTPS</strong> bổ sung thêm lớp mã hóa SSL/TLS để bảo mật dữ liệu.</li></ul><p><strong>3. FTP (File Transfer Protocol):</strong></p><ul><li>Giao thức dùng để truyền tải tập tin giữa các máy tính.</li></ul><p><strong>4. SMTP và POP3/IMAP:</strong></p><ul><li><strong>SMTP</strong> (Simple Mail Transfer Protocol) được sử dụng để gửi email.</li><li><strong>POP3</strong> (Post Office Protocol) và <strong>IMAP</strong> (Internet Message Access Protocol) để nhận email.</li></ul><p><strong>5. WebSocket:</strong></p><ul><li>Hỗ trợ giao tiếp hai chiều giữa máy khách và máy chủ, thích hợp cho các ứng dụng thời gian thực như trò chuyện hoặc game trực tuyến.</li></ul><p><strong>6. DNS (Domain Name System):</strong></p><ul><li>Chuyển đổi tên miền dễ đọc thành địa chỉ IP để kết nối các máy chủ.</li></ul><hr><h4>4. Các Công Cụ Và Công Nghệ Phổ Biến Trong Lập Trình Mạng</h4><ul><li><strong>Socket Programming:</strong> Cho phép tạo kết nối mạng giữa hai ứng dụng thông qua giao thức TCP hoặc UDP.</li><li><strong>API RESTful và GraphQL:</strong> Hỗ trợ xây dựng giao diện lập trình ứng dụng để giao tiếp giữa các hệ thống khác nhau.</li><li><strong>Frameworks phổ biến:</strong> Node.js (JavaScript), Flask/Django (Python), Spring Boot (Java).</li><li><strong>Công nghệ mã hóa:</strong> SSL/TLS để đảm bảo an toàn dữ liệu khi truyền qua mạng.</li></ul><hr><h4>5. Tầm Quan Trọng Của Bảo Mật Mạng</h4><p>Lập trình mạng không thể thiếu yếu tố bảo mật để bảo vệ dữ liệu trước các cuộc tấn công mạng. Các kỹ thuật bảo mật bao gồm:</p><ul><li><strong>Mã hóa dữ liệu:</strong> Bảo vệ dữ liệu khi truyền qua mạng bằng các thuật toán mã hóa như AES hoặc RSA.</li><li><strong>Chứng chỉ số (SSL/TLS):</strong> Đảm bảo kết nối an toàn giữa máy chủ và máy khách.</li><li><strong>Tường lửa (Firewall):</strong> Ngăn chặn truy cập trái phép.</li><li><strong>VPN (Virtual Private Network):</strong> Tạo kết nối bảo mật qua mạng công cộng.</li></ul><hr><h3>Tổng Quan Về Lập Trình Đa Tuyến</h3><h4>1. Giới Thiệu Về Lập Trình Đa Tuyến</h4><p>Lập trình đa tuyến (Multithreading) là kỹ thuật cho phép một chương trình thực thi nhiều luồng (threads) cùng lúc. Điều này giúp tăng hiệu suất và khả năng xử lý đa nhiệm của ứng dụng.</p><hr><h4>2. Lớp Thread và Giao Diện Runnable</h4><ul><li><strong>Lớp Thread:</strong> Java cung cấp lớp <code>Thread</code> để tạo và quản lý các luồng. Một luồng có thể được tạo bằng cách kế thừa lớp <code>Thread</code> và ghi đè phương thức <code>run()</code>.</li><li><strong>Giao Diện Runnable:</strong> Một cách khác để tạo luồng là triển khai giao diện <code>Runnable</code> và truyền nó vào một đối tượng <code>Thread</code>.</li></ul><p>Ví dụ:</p><pre><code class="language-java">class MyThread extends Thread {
+                }</style></noscript></head><body class="post-template"><header class="top js-header"><a class="logo" href="https://github.com/quangminh2k3/my1blog.git/"><img src="https://github.com/quangminh2k3/my1blog.git/media/website/concept-construction-page-site.jpg" alt="MyBlog" width="910" height="501"></a></header><main class="post"><article class="content"><div class="hero hero--noimage"><header class="hero__content"><div class="wrapper"><h1>Blog 04_ Lập trình đa tuyến</h1><div class="feed__meta content__meta"><a href="https://github.com/quangminh2k3/my1blog.git/authors/lam-quang-minh/" class="feed__author">Lâm Quang Minh</a> <time datetime="2024-12-26T13:19" class="feed__date">tháng 12 26, 2024</time></div></div></header></div><div class="entry-wrapper content__entry"><h2 data-pm-slice="1 1 []">1. Giới Thiệu Về Lập Trình Đa Tuyến</h2><p>Lập trình đa tuyến (Multithreading) là kỹ thuật cho phép một chương trình thực thi nhiều luồng (threads) đồng thời để cải thiện hiệu suất và khả năng phản hồi. Mỗi luồng là một luồng điều khiển riêng biệt có thể thực thi độc lập trong cùng một tiến trình.</p><h3>Ưu Điểm Của Đa Tuyến</h3><ol start="1" data-spread="false"><li><p><strong>Tăng Hiệu Suất:</strong> Xử lý song song giúp tận dụng tối đa tài nguyên CPU.</p></li><li><p><strong>Khả Năng Phản Hồi Tốt Hơn:</strong> Ứng dụng có thể phản hồi nhanh chóng với các yêu cầu từ người dùng.</p></li><li><p><strong>Chia Sẻ Tài Nguyên:</strong> Các luồng trong cùng một tiến trình có thể chia sẻ bộ nhớ và tài nguyên dễ dàng.</p></li></ol><div><hr></div><h2>2. Lớp Thread Trong Java</h2><h3>Khởi Tạo Thread</h3><p>Có hai cách để tạo luồng trong Java:</p><ol start="1" data-spread="false"><li><p><strong>Kế Thừa lớp Thread:</strong></p></li></ol><pre><code>class MyThread extends Thread {
     public void run() {
-        System.out.println("Luồng đang chạy...");
+        System.out.println("Thread đang chạy...");
     }
 }
 
-MyThread thread = new MyThread();
-thread.start();
-</code></pre><hr><h4>3. Đồng Bộ Hóa (Synchronization)</h4><p>Đồng bộ hóa giúp ngăn chặn các luồng truy cập cùng lúc vào tài nguyên chia sẻ, tránh xung đột dữ liệu. Java hỗ trợ đồng bộ hóa qua từ khóa <code>synchronized</code>.</p><p>Ví dụ:</p><pre><code class="language-java">class Counter {
-    private int count = 0;
+public class TestThread {
+    public static void main(String[] args) {
+        MyThread t1 = new MyThread();
+        t1.start(); // Bắt đầu luồng
+    }
+}</code></pre><ol start="2" data-spread="false"><li><p><strong>Triển Khai Giao Diện Runnable:</strong></p></li></ol><pre><code>class MyRunnable implements Runnable {
+    public void run() {
+        System.out.println("Runnable đang chạy...");
+    }
+}
+
+public class TestRunnable {
+    public static void main(String[] args) {
+        Thread t1 = new Thread(new MyRunnable());
+        t1.start(); // Bắt đầu luồng
+    }
+}</code></pre><div><hr></div><h2>3. Đồng Bộ Hóa (Synchronization)</h2><h3>Vấn Đề Đồng Bộ Hóa</h3><p>Khi nhiều luồng cùng truy cập vào một tài nguyên chung, xung đột dữ liệu có thể xảy ra. Để giải quyết vấn đề này, Java cung cấp cơ chế <strong>đồng bộ hóa (synchronization)</strong>.</p><h3>Ví Dụ Không Đồng Bộ</h3><pre><code>class Counter {
+    int count = 0;
+
+    public void increment() {
+        count++;
+    }
+}
+
+public class TestSync {
+    public static void main(String[] args) {
+        Counter counter = new Counter();
+
+        Thread t1 = new Thread(() -&gt; {
+            for (int i = 0; i &lt; 1000; i++) counter.increment();
+        });
+
+        Thread t2 = new Thread(() -&gt; {
+            for (int i = 0; i &lt; 1000; i++) counter.increment();
+        });
+
+        t1.start();
+        t2.start();
+
+        try {
+            t1.join();
+            t2.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("Count: " + counter.count);
+    }
+}</code></pre><p><strong>Kết Quả:</strong> Giá trị của <code>count</code> có thể không đúng do điều kiện tranh chấp.</p><h3>Giải Pháp Đồng Bộ Hóa</h3><p>Sử dụng từ khóa <code>synchronized</code> để đảm bảo chỉ một luồng có thể truy cập vào phương thức cùng lúc:</p><pre><code>class Counter {
+    int count = 0;
 
     public synchronized void increment() {
         count++;
     }
+}</code></pre><div><hr></div><h2>4. Trao Đổi Dữ Liệu Giữa Các Luồng</h2><h3>Sử Dụng wait() và notify()</h3><p>Java cung cấp các phương thức <code>wait()</code>, <code>notify()</code>, và <code>notifyAll()</code> để quản lý việc trao đổi dữ liệu giữa các luồng.</p><h3>Ví Dụ</h3><pre><code>class Data {
+    private String message;
 
-    public int getCount() {
-        return count;
-    }
-}
-</code></pre><hr><h4>4. Trao Đổi Dữ Liệu Giữa Các Luồng</h4><p>Java cung cấp các cơ chế như <code>wait()</code>, <code>notify()</code>, và <code>notifyAll()</code> để quản lý sự phối hợp giữa các luồng.</p><p>Ví dụ:</p><pre><code class="language-java">class SharedData {
-    synchronized void produce() throws InterruptedException {
-        wait();
-        System.out.println("Dữ liệu được sản xuất.");
+    public synchronized void send(String msg) {
+        this.message = msg;
+        notify(); // Báo hiệu luồng nhận có thể tiếp tục
     }
 
-    synchronized void consume() {
-        notify();
-        System.out.println("Dữ liệu được tiêu thụ.");
+    public synchronized String receive() {
+        try {
+            wait(); // Chờ cho đến khi nhận được dữ liệu
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return message;
     }
 }
-</code></pre><hr><h3>Kết Luận</h3><p>Lập trình mạng và lập trình đa tuyến là hai lĩnh vực quan trọng trong phát triển phần mềm hiện đại. Việc nắm vững các khái niệm về giao thức mạng và quản lý luồng sẽ giúp lập trình viên xây dựng ứng dụng hiệu suất cao và đáng tin cậy.</p></div><footer class="content__footer"><div class="entry-wrapper"><p class="content__updated">This article was updated on tháng 12 26, 2024</p><div class="content__actions"><div class="content__share"><button class="btn--icon content__share-button js-content__share-button"><svg width="20" height="20" aria-hidden="true"><use xlink:href="https://github.com/quangminh2k3/my1blog.git/assets/svg/svg-map.svg#share"></use></svg> <span>Share It</span></button><div class="content__share-popup js-content__share-popup"></div></div></div><div class="content__bio bio"><div><h3 class="h4 bio__name"><a href="https://github.com/quangminh2k3/my1blog.git/authors/lam-quang-minh/" rel="author">Lâm Quang Minh</a></h3></div></div></div><nav class="content__nav"><div class="wrapper"><div class="content__nav-inner"><div class="content__nav-prev"><a href="https://github.com/quangminh2k3/my1blog.git/blog-03_.html" class="content__nav-link" rel="prev"><div><span>Previous</span> Blog 03_ Tổng quan về lập trình mạng</div></a></div></div></div></nav></footer></article><div class="content__related related"><div class="wrapper"><h2 class="h4 related__title">You should also read:</h2><article class="feed__item feed__item--centered"><div class="feed__content"><header><div class="feed__meta"><a href="https://github.com/quangminh2k3/my1blog.git/authors/lam-quang-minh/" class="feed__author">Lâm Quang Minh</a> <time datetime="2024-12-26T12:58" class="feed__date">tháng 12 26, 2024</time></div><h3 class="feed__title"><a href="https://github.com/quangminh2k3/my1blog.git/blog-03_.html">Blog 03_ Tổng quan về lập trình mạng</a></h3></header><p>Tổng Quan Về Lập Trình Mạng 1. Lập Trình Mạng Là Gì? Lập trình mạng là quá trình xây dựng các ứng dụng phần mềm có khả năng giao tiếp và truyền dữ liệu qua mạng máy tính. Nó cho phép các thiết bị khác&hellip;</p><a href="https://github.com/quangminh2k3/my1blog.git/blog-03_.html" class="readmore feed__readmore">Continue reading...</a></div></article><article class="feed__item feed__item--centered"><div class="feed__content"><header><div class="feed__meta"><a href="https://github.com/quangminh2k3/my1blog.git/authors/lam-quang-minh/" class="feed__author">Lâm Quang Minh</a> <time datetime="2024-12-26T12:57" class="feed__date">tháng 12 26, 2024</time></div><h3 class="feed__title"><a href="https://github.com/quangminh2k3/my1blog.git/blog-02_.html">Blog 02_ Giới thiệu về JavaScript</a></h3></header><p>JavaScript Là Gì? JavaScript (JS) là một ngôn ngữ lập trình mạnh mẽ, được sử dụng rộng rãi để phát triển các ứng dụng web. Ra đời vào năm 1995 bởi Brendan Eich, JavaScript ban đầu được thiết kế để tăng cường tính tương tác&hellip;</p><a href="https://github.com/quangminh2k3/my1blog.git/blog-02_.html" class="readmore feed__readmore">Continue reading...</a></div></article><article class="feed__item feed__item--centered"><div class="feed__content"><header><div class="feed__meta"><a href="https://github.com/quangminh2k3/my1blog.git/authors/lam-quang-minh/" class="feed__author">Lâm Quang Minh</a> <time datetime="2024-12-25T21:51" class="feed__date">tháng 12 25, 2024</time></div><h3 class="feed__title"><a href="https://github.com/quangminh2k3/my1blog.git/blog-01_.html">Blog 01_ Tôi đã học lập trình web như thế nào?</a></h3></header><p>Giới Thiệu Bản Thân Xin chào! Tôi là Lâm Quang Minh, sinh năm 2003 và hiện là sinh viên năm cuối tại trường Đại học Công nghệ TP.HCM (HUTECH). Trong hành trình học tập tại HUTECH, tôi đã có cơ hội khám phá và đam&hellip;</p><a href="https://github.com/quangminh2k3/my1blog.git/blog-01_.html" class="readmore feed__readmore">Continue reading...</a></div></article></div></div></main><footer class="footer footer--glued"><div class="wrapper"><div class="footer__copyright"><p>Powered by Publii</p></div><button onclick="backToTopFunction()" id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top"><svg width="20" height="20"><use xlink:href="https://github.com/quangminh2k3/my1blog.git/assets/svg/svg-map.svg#toparrow"/></svg></button></div></footer><script defer="defer" src="https://github.com/quangminh2k3/my1blog.git/assets/js/scripts.min.js?v=700105c316933a8202041b6415abb233"></script><script>window.publiiThemeMenuConfig={mobileMenuMode:'sidebar',animationSpeed:300,submenuWidth: 'auto',doubleClickTime:500,mobileMenuExpandableSubmenus:true,relatedContainerForOverlayMenuSelector:'.top'};</script><script>var images = document.querySelectorAll('img[loading]');
+
+class Sender extends Thread {
+    private Data data;
+
+    Sender(Data data) {
+        this.data = data;
+    }
+
+    public void run() {
+        data.send("Hello from Sender!");
+    }
+}
+
+class Receiver extends Thread {
+    private Data data;
+
+    Receiver(Data data) {
+        this.data = data;
+    }
+
+    public void run() {
+        System.out.println(data.receive());
+    }
+}
+
+public class TestCommunication {
+    public static void main(String[] args) {
+        Data data = new Data();
+        Sender sender = new Sender(data);
+        Receiver receiver = new Receiver(data);
+        sender.start();
+        receiver.start();
+    }
+}</code></pre><div><hr></div><h2>5. Executor Framework</h2><p>Java cung cấp <strong>Executor Framework</strong> để quản lý các luồng một cách hiệu quả.</p><h3>Ví Dụ</h3><pre><code>import java.util.concurrent.*;
+
+public class ExecutorExample {
+    public static void main(String[] args) {
+        ExecutorService executor = Executors.newFixedThreadPool(3);
+
+        Runnable worker1 = () -&gt; System.out.println("Worker 1 đang chạy...");
+        Runnable worker2 = () -&gt; System.out.println("Worker 2 đang chạy...");
+
+        executor.execute(worker1);
+        executor.execute(worker2);
+
+        executor.shutdown();
+    }
+}</code></pre><div><hr></div><h2>Kết Luận</h2><p>Lập trình đa tuyến trong Java là một công cụ mạnh mẽ để phát triển các ứng dụng hiệu suất cao. Bằng cách sử dụng các lớp <code>Thread</code>, <code>Runnable</code>, đồng bộ hóa và các cơ chế trao đổi dữ liệu, lập trình viên có thể dễ dàng quản lý luồng và xử lý đồng thời một cách an toàn.</p></div><footer class="content__footer"><div class="entry-wrapper"><p class="content__updated">This article was updated on tháng 12 26, 2024</p><div class="content__actions"><div class="content__share"><button class="btn--icon content__share-button js-content__share-button"><svg width="20" height="20" aria-hidden="true"><use xlink:href="https://github.com/quangminh2k3/my1blog.git/assets/svg/svg-map.svg#share"></use></svg> <span>Share It</span></button><div class="content__share-popup js-content__share-popup"></div></div></div><div class="content__bio bio"><div><h3 class="h4 bio__name"><a href="https://github.com/quangminh2k3/my1blog.git/authors/lam-quang-minh/" rel="author">Lâm Quang Minh</a></h3></div></div></div><nav class="content__nav"><div class="wrapper"><div class="content__nav-inner"><div class="content__nav-prev"><a href="https://github.com/quangminh2k3/my1blog.git/blog-03_.html" class="content__nav-link" rel="prev"><div><span>Previous</span> Blog 03_ Tổng quan về lập trình mạng</div></a></div><div class="content__nav-next"><a href="https://github.com/quangminh2k3/my1blog.git/blog-05_-quan-ly-dia-chi-ket-noi-mang.html" class="content__nav-link" rel="next"><div><span>Next</span> Blog 05_ Quản lý địa chỉ kết nối mạng</div></a></div></div></div></nav></footer></article><div class="content__related related"><div class="wrapper"><h2 class="h4 related__title">You should also read:</h2><article class="feed__item feed__item--centered"><div class="feed__content"><header><div class="feed__meta"><a href="https://github.com/quangminh2k3/my1blog.git/authors/lam-quang-minh/" class="feed__author">Lâm Quang Minh</a> <time datetime="2024-12-26T13:42" class="feed__date">tháng 12 26, 2024</time></div><h3 class="feed__title"><a href="https://github.com/quangminh2k3/my1blog.git/blog-06_.html">Blog 06_ Lập trình Socket cho giao thức TCP</a></h3></header><p>1. Giới Thiệu Về Lập Trình Socket Lập trình socket là kỹ thuật cho phép hai ứng dụng trên các máy tính khác nhau hoặc cùng một máy tính giao tiếp với nhau thông qua mạng. Socket hỗ trợ các giao thức như TCP (Transmission&hellip;</p><a href="https://github.com/quangminh2k3/my1blog.git/blog-06_.html" class="readmore feed__readmore">Continue reading...</a></div></article><article class="feed__item feed__item--centered"><div class="feed__content"><header><div class="feed__meta"><a href="https://github.com/quangminh2k3/my1blog.git/authors/lam-quang-minh/" class="feed__author">Lâm Quang Minh</a> <time datetime="2024-12-26T13:28" class="feed__date">tháng 12 26, 2024</time></div><h3 class="feed__title"><a href="https://github.com/quangminh2k3/my1blog.git/blog-05_-quan-ly-dia-chi-ket-noi-mang.html">Blog 05_ Quản lý địa chỉ kết nối mạng</a></h3></header><p>1. Lớp InetAddress Giới Thiệu Lớp InetAddress trong Java được sử dụng để biểu diễn địa chỉ IP của một máy chủ hoặc máy khách trên mạng. Nó hỗ trợ xử lý cả địa chỉ IPv4 và IPv6. getByName(String host): Lấy địa chỉ IP từ&hellip;</p><a href="https://github.com/quangminh2k3/my1blog.git/blog-05_-quan-ly-dia-chi-ket-noi-mang.html" class="readmore feed__readmore">Continue reading...</a></div></article><article class="feed__item feed__item--centered"><div class="feed__content"><header><div class="feed__meta"><a href="https://github.com/quangminh2k3/my1blog.git/authors/lam-quang-minh/" class="feed__author">Lâm Quang Minh</a> <time datetime="2024-12-26T12:58" class="feed__date">tháng 12 26, 2024</time></div><h3 class="feed__title"><a href="https://github.com/quangminh2k3/my1blog.git/blog-03_.html">Blog 03_ Tổng quan về lập trình mạng</a></h3></header><p>Tổng Quan Về Lập Trình Mạng 1. Lập Trình Mạng Là Gì? Lập trình mạng là quá trình xây dựng các ứng dụng phần mềm có khả năng giao tiếp và truyền dữ liệu qua mạng máy tính. Nó cho phép các thiết bị khác&hellip;</p><a href="https://github.com/quangminh2k3/my1blog.git/blog-03_.html" class="readmore feed__readmore">Continue reading...</a></div></article></div></div></main><footer class="footer footer--glued"><div class="wrapper"><div class="footer__copyright"><p>Powered by Publii</p></div><button onclick="backToTopFunction()" id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top"><svg width="20" height="20"><use xlink:href="https://github.com/quangminh2k3/my1blog.git/assets/svg/svg-map.svg#toparrow"/></svg></button></div></footer><script defer="defer" src="https://github.com/quangminh2k3/my1blog.git/assets/js/scripts.min.js?v=700105c316933a8202041b6415abb233"></script><script>window.publiiThemeMenuConfig={mobileMenuMode:'sidebar',animationSpeed:300,submenuWidth: 'auto',doubleClickTime:500,mobileMenuExpandableSubmenus:true,relatedContainerForOverlayMenuSelector:'.top'};</script><script>var images = document.querySelectorAll('img[loading]');
         for (var i = 0; i < images.length; i++) {
             if (images[i].complete) {
                 images[i].classList.add('is-loaded');
