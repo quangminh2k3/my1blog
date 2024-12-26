@@ -3,12 +3,357 @@
     <title>MyBlog</title>
     <link href="https://github.com/quangminh2k3/my1blog.git/feed.xml" rel="self" />
     <link href="https://github.com/quangminh2k3/my1blog.git" />
-    <updated>2024-12-26T14:34:48+07:00</updated>
+    <updated>2024-12-26T15:01:43+07:00</updated>
     <author>
         <name>Lâm Quang Minh</name>
     </author>
     <id>https://github.com/quangminh2k3/my1blog.git</id>
 
+    <entry>
+        <title>Blog 09_ Lập trình Multicast</title>
+        <author>
+            <name>Lâm Quang Minh</name>
+        </author>
+        <link href="https://github.com/quangminh2k3/my1blog.git/blog-09_.html"/>
+        <id>https://github.com/quangminh2k3/my1blog.git/blog-09_.html</id>
+
+        <updated>2024-12-26T14:48:28+07:00</updated>
+            <summary>
+                <![CDATA[
+                    1. Tổng quan về Multicast Multicast là một phương pháp truyền dữ liệu cho nhiều máy nhận trong một mạng thông qua một nhóm địa chỉ multicast cụ thể. Thay vì gửi dữ liệu đến từng máy nhận riêng lẻ (unicast) hoặc gửi đến toàn&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h4 data-pm-slice="1 1 []">1. <strong>Tổng quan về Multicast</strong></h4>
+<p>Multicast là một phương pháp truyền dữ liệu cho nhiều máy nhận trong một mạng thông qua một nhóm địa chỉ multicast cụ thể. Thay vì gửi dữ liệu đến từng máy nhận riêng lẻ (unicast) hoặc gửi đến toàn bộ mạng (broadcast), multicast cho phép truyền dữ liệu hiệu quả đến một nhóm các máy nhận đăng ký.</p>
+<h5><strong>Đặc điểm của Multicast:</strong></h5>
+<ul data-spread="false">
+<li>
+<p><strong>Hiệu quả:</strong> Dữ liệu chỉ được gửi một lần từ nguồn và được sao chép bởi các router trong mạng để đến các thành viên trong nhóm multicast.</p>
+</li>
+<li>
+<p><strong>Nhóm địa chỉ multicast:</strong> Các địa chỉ IP từ <strong>224.0.0.0</strong> đến <strong>239.255.255.255</strong> được dành riêng cho multicast.</p>
+</li>
+<li>
+<p><strong>Ứng dụng:</strong> Multicast thường được sử dụng trong các ứng dụng phát sóng trực tiếp, hội nghị video, và chia sẻ dữ liệu thời gian thực.</p>
+</li>
+</ul>
+<div><hr></div>
+<h4>2. <strong>MulticastSocket</strong></h4>
+<p>Lớp <code>MulticastSocket</code> trong Java mở rộng lớp <code>DatagramSocket</code> và được thiết kế để hỗ trợ giao thức UDP với tính năng multicast.</p>
+<h5><strong>Các tính năng chính của MulticastSocket:</strong></h5>
+<ol start="1" data-spread="false">
+<li>
+<p><strong>Tham gia nhóm (Join Group):</strong> MulticastSocket có thể tham gia một nhóm địa chỉ multicast để nhận dữ liệu.</p>
+</li>
+<li>
+<p><strong>Rời khỏi nhóm (Leave Group):</strong> MulticastSocket có thể rời khỏi một nhóm multicast khi không cần nhận dữ liệu nữa.</p>
+</li>
+<li>
+<p><strong>Gửi dữ liệu:</strong> Gửi các gói tin đến một địa chỉ multicast.</p>
+</li>
+</ol>
+<h5><strong>Các phương thức quan trọng:</strong></h5>
+<ul data-spread="false">
+<li>
+<p><code>joinGroup(InetAddress group)</code>: Tham gia vào một nhóm multicast.</p>
+</li>
+<li>
+<p><code>leaveGroup(InetAddress group)</code>: Rời khỏi nhóm multicast.</p>
+</li>
+<li>
+<p><code>setTimeToLive(int ttl)</code>: Đặt giá trị Time-To-Live (TTL) để kiểm soát phạm vi truyền của gói tin multicast.</p>
+</li>
+<li>
+<p><code>send(DatagramPacket packet)</code>: Gửi một gói tin đến địa chỉ multicast.</p>
+</li>
+<li>
+<p><code>receive(DatagramPacket packet)</code>: Nhận gói tin từ nhóm multicast.</p>
+</li>
+</ul>
+<div><hr></div>
+<h4>3. <strong>Các bước lập trình Multicast</strong></h4>
+<h5><strong>3.1. Gửi dữ liệu Multicast</strong></h5>
+<p>Để gửi dữ liệu đến một nhóm multicast, cần thực hiện các bước sau:</p>
+<ol start="1" data-spread="false">
+<li>
+<p><strong>Tạo một đối tượng </strong><code><strong>MulticastSocket</strong></code><strong>.</strong></p>
+</li>
+<li>
+<p><strong>Đặt TTL (tuỳ chọn):</strong> Quy định phạm vi của gói tin multicast.</p>
+</li>
+<li>
+<p><strong>Tạo gói tin DatagramPacket chứa dữ liệu.</strong></p>
+</li>
+<li>
+<p><strong>Gửi gói tin đến địa chỉ multicast.</strong></p>
+</li>
+</ol>
+<h6><strong>Ví dụ gửi dữ liệu Multicast:</strong></h6>
+<pre><code>import java.net.*;
+
+public class MulticastSender {
+    public static void main(String[] args) {
+        try (MulticastSocket socket = new MulticastSocket()) {
+            String message = "Hello, Multicast!";
+            byte[] buffer = message.getBytes();
+
+            InetAddress group = InetAddress.getByName("230.0.0.0"); // Địa chỉ multicast
+            int port = 4446; // Cổng multicast
+            DatagramPacket packet = new DatagramPacket(buffer, buffer.length, group, port);
+
+            socket.setTimeToLive(1); // Phạm vi multicast (1 = cục bộ)
+            socket.send(packet);
+
+            System.out.println("Đã gửi: " + message);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+<div><hr></div>
+<h5><strong>3.2. Nhận dữ liệu Multicast</strong></h5>
+<p>Để nhận dữ liệu từ một nhóm multicast, cần thực hiện các bước sau:</p>
+<ol start="1" data-spread="false">
+<li>
+<p><strong>Tạo một đối tượng </strong><code><strong>MulticastSocket</strong></code><strong> lắng nghe trên một cổng.</strong></p>
+</li>
+<li>
+<p><strong>Tham gia vào nhóm multicast.</strong></p>
+</li>
+<li>
+<p><strong>Tạo bộ đệm (buffer) để chứa dữ liệu nhận.</strong></p>
+</li>
+<li>
+<p><strong>Nhận dữ liệu bằng phương thức </strong><code><strong>receive()</strong></code><strong>.</strong></p>
+</li>
+<li>
+<p><strong>Xử lý và hiển thị dữ liệu.</strong></p>
+</li>
+</ol>
+<h6><strong>Ví dụ nhận dữ liệu Multicast:</strong></h6>
+<pre><code>import java.net.*;
+
+public class MulticastReceiver {
+    public static void main(String[] args) {
+        try (MulticastSocket socket = new MulticastSocket(4446)) { // Lắng nghe trên cổng 4446
+            InetAddress group = InetAddress.getByName("230.0.0.0"); // Địa chỉ multicast
+            socket.joinGroup(group); // Tham gia nhóm
+
+            byte[] buffer = new byte[1024];
+
+            while (true) {
+                DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
+                socket.receive(packet);
+
+                String received = new String(packet.getData(), 0, packet.getLength());
+                System.out.println("Đã nhận: " + received);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+<div><hr></div>
+<h5><strong>3.3. Rời khỏi nhóm Multicast</strong></h5>
+<p>Nếu không cần nhận dữ liệu từ nhóm multicast, bạn có thể sử dụng phương thức <code>leaveGroup()</code> để rời nhóm.</p>
+<h6><strong>Ví dụ rời nhóm Multicast:</strong></h6>
+<pre><code>socket.leaveGroup(group);</code></pre>
+<div><hr></div>
+<h4>4. <strong>Kết luận</strong></h4>
+<p>Lập trình multicast với lớp <code>MulticastSocket</code> trong Java cung cấp một phương pháp hiệu quả để truyền dữ liệu đến nhiều máy nhận trong một nhóm. Tuy nhiên, để triển khai multicast hiệu quả trong môi trường thực tế, cần cân nhắc về phạm vi TTL, địa chỉ nhóm, và xử lý lỗi trong quá trình gửi/nhận dữ liệu.</p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Blog 08_ Lập trình Socket cho giao thức UDP</title>
+        <author>
+            <name>Lâm Quang Minh</name>
+        </author>
+        <link href="https://github.com/quangminh2k3/my1blog.git/blog-08_-lap-trinh-socket-cho-giao-thuc-udp.html"/>
+        <id>https://github.com/quangminh2k3/my1blog.git/blog-08_-lap-trinh-socket-cho-giao-thuc-udp.html</id>
+
+        <updated>2024-12-26T14:43:22+07:00</updated>
+            <summary>
+                <![CDATA[
+                    1. Giới Thiệu Lập trình socket cho giao thức UDP (User Datagram Protocol) là một kỹ thuật quan trọng trong việc xây dựng các ứng dụng mạng. UDP là giao thức phi kết nối, cung cấp cách truyền dữ liệu nhanh chóng nhưng không bảo&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2 data-pm-slice="1 1 []">1. Giới Thiệu</h2>
+<p>Lập trình socket cho giao thức UDP (User Datagram Protocol) là một kỹ thuật quan trọng trong việc xây dựng các ứng dụng mạng. UDP là giao thức phi kết nối, cung cấp cách truyền dữ liệu nhanh chóng nhưng không bảo đảm tính toàn vẹn (reliability). Bài viết này sẽ tổng quan về giao thức UDP, hai lớp quan trọng trong Java là <strong>DatagramPacket</strong> và <strong>DatagramSocket</strong>, kèm theo ví dụ minh hoạ.</p>
+<div><hr></div>
+<h2>2. Tổng Quan Về Giao Thức UDP</h2>
+<h3>2.1. Khái Niệm</h3>
+<p>UDP là giao thức truyền dữ liệu dựa trên gói tin (<strong>datagram</strong>) và không yêu cầu kết nối trước khi truyền. Một vài đặc điểm chính:</p>
+<ul data-spread="false">
+<li>
+<p><strong>Nhanh chóng</strong>: UDP không yêu cầu quy trình bắt tay ba (three-way handshake) như TCP, nên truyền dữ liệu nhanh.</p>
+</li>
+<li>
+<p><strong>Phi kết nối</strong>: Không duy trì kết nối, giao thức UDP chỉ gửi gói tin đến địa chỉ đích.</p>
+</li>
+<li>
+<p><strong>Không đảm bảo</strong>: UDP không đảm bảo gói tin đến đúng thứ tự, không đảm bảo không bị mất dữ liệu.</p>
+</li>
+</ul>
+<p>UDP thường được sử dụng trong các ứng dụng thường xuyên truyền tải dữ liệu nhỏ, như streaming video/audio, DNS, hay game online.</p>
+<div><hr></div>
+<h2>3. Lớp DatagramPacket</h2>
+<h3>3.1. Khái Niệm</h3>
+<p><strong>DatagramPacket</strong> là lớp đại diện cho gói tin trong giao thức UDP. Mỗi gói tin chứa dữ liệu cũng như địa chỉ IP và cổng của máy nhận.</p>
+<h3>3.2. Tạo DatagramPacket</h3>
+<p>Khi gửi dữ liệu, ta sử dụng constructor:</p>
+<pre><code>DatagramPacket(byte[] data, int length, InetAddress address, int port)</code></pre>
+<ul data-spread="false">
+<li>
+<p><strong>data</strong>: Mảng byte chứa dữ liệu.</p>
+</li>
+<li>
+<p><strong>length</strong>: Độ dài của dữ liệu.</p>
+</li>
+<li>
+<p><strong>address</strong>: Địa chỉ IP của máy nhận.</p>
+</li>
+<li>
+<p><strong>port</strong>: Cổng của máy nhận.</p>
+</li>
+</ul>
+<p>Khi nhận dữ liệu, ta khai báo constructor:</p>
+<pre><code>DatagramPacket(byte[] buffer, int length)</code></pre>
+<ul data-spread="false">
+<li>
+<p><strong>buffer</strong>: Mảng byte để chứa dữ liệu nhận.</p>
+</li>
+<li>
+<p><strong>length</strong>: Độ dài buffer.</p>
+</li>
+</ul>
+<div><hr></div>
+<h2>4. Lớp DatagramSocket</h2>
+<h3>4.1. Khái Niệm</h3>
+<p><strong>DatagramSocket</strong> là lớp để gửi và nhận gói tin trong giao thức UDP. Socket đóng vai trò như một điểm giao tiếp cho giao thức UDP.</p>
+<h3>4.2. Tạo DatagramSocket</h3>
+<ul data-spread="false">
+<li>
+<p>Khởi tạo server UDP:</p>
+</li>
+</ul>
+<pre><code>DatagramSocket socket = new DatagramSocket(int port);</code></pre>
+<ul data-spread="false">
+<li>
+<p>Khởi tạo client UDP:</p>
+</li>
+</ul>
+<pre><code>DatagramSocket socket = new DatagramSocket();</code></pre>
+<h3>4.3. Gửi Dữ Liệu</h3>
+<p>Phương thức gửi gói tin:</p>
+<pre><code>socket.send(DatagramPacket packet);</code></pre>
+<h3>4.4. Nhận Dữ Liệu</h3>
+<p>Phương thức nhận gói tin:</p>
+<pre><code>socket.receive(DatagramPacket packet);</code></pre>
+<div><hr></div>
+<h2>5. Ví Dụ UDP Trong Java</h2>
+<h3>5.1. Server UDP</h3>
+<pre><code>import java.net.*;
+
+public class UDPServer {
+    public static void main(String[] args) {
+        try (DatagramSocket socket = new DatagramSocket(7000)) {
+            byte[] buffer = new byte[1024];
+
+            while (true) {
+                DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
+                socket.receive(packet);
+
+                String received = new String(packet.getData(), 0, packet.getLength());
+                System.out.println("Nhận được: " + received);
+
+                String response = "Server đã nhận: " + received;
+                byte[] responseBytes = response.getBytes();
+
+                DatagramPacket responsePacket = new DatagramPacket(
+                        responseBytes, responseBytes.length, packet.getAddress(), packet.getPort());
+                socket.send(responsePacket);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+<h3>5.2. Client UDP</h3>
+<pre><code>import java.net.*;
+
+public class UDPClient {
+    public static void main(String[] args) {
+        try (DatagramSocket socket = new DatagramSocket()) {
+            String message = "Xin chào Server!";
+            byte[] buffer = message.getBytes();
+
+            InetAddress address = InetAddress.getByName("localhost");
+            DatagramPacket packet = new DatagramPacket(buffer, buffer.length, address, 7000);
+            socket.send(packet);
+
+            byte[] responseBuffer = new byte[1024];
+            DatagramPacket responsePacket = new DatagramPacket(responseBuffer, responseBuffer.length);
+            socket.receive(responsePacket);
+
+            String response = new String(responsePacket.getData(), 0, responsePacket.getLength());
+            System.out.println("Phản hồi từ Server: " + response);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+<h3>5.3. Gửi Và Nhận Gói Tin Trong UDP</h3>
+<h4>Gửi Gói Tin</h4>
+<p>Để gửi gói tin UDP, bạn cần thực hiện các bước sau:</p>
+<ol start="1" data-spread="false">
+<li>
+<p>Tạo một mảng byte chứa dữ liệu cần gửi.</p>
+</li>
+<li>
+<p>Tạo đối tượng <code>DatagramPacket</code> với dữ liệu, địa chỉ IP và cổng của máy nhận.</p>
+</li>
+<li>
+<p>Sử dụng phương thức <code>send()</code> của <code>DatagramSocket</code> để gửi gói tin.</p>
+</li>
+</ol>
+<p>Ví dụ gửi gói tin:</p>
+<pre><code>String message = "Hello, UDP!";
+byte[] buffer = message.getBytes();
+InetAddress address = InetAddress.getByName("127.0.0.1");
+int port = 7000;
+DatagramPacket packet = new DatagramPacket(buffer, buffer.length, address, port);
+socket.send(packet);</code></pre>
+<h4>Nhận Gói Tin</h4>
+<p>Để nhận gói tin UDP:</p>
+<ol start="1" data-spread="false">
+<li>
+<p>Tạo một mảng byte làm bộ đệm để chứa dữ liệu nhận được.</p>
+</li>
+<li>
+<p>Tạo đối tượng <code>DatagramPacket</code> với bộ đệm này.</p>
+</li>
+<li>
+<p>Sử dụng phương thức <code>receive()</code> của <code>DatagramSocket</code> để nhận gói tin.</p>
+</li>
+</ol>
+<p>Ví dụ nhận gói tin:</p>
+<pre><code>byte[] buffer = new byte[1024];
+DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
+socket.receive(packet);
+String receivedMessage = new String(packet.getData(), 0, packet.getLength());
+System.out.println("Nhận được: " + receivedMessage);</code></pre>
+<div><hr></div>
+<h2>6. Kết Luận</h2>
+<p>Lập trình socket với giao thức UDP cung cấp một giải pháp truyền tải nhanh nhất cho các ứng dụng có tính độ linh hoạt cao. Tuy nhiên, để đảm bảo tính toàn vẹn và thứ tự gói tin, các nhà phát triển cần xây dựng thêm logic phù hợp. Với Java, việc sử dụng lớp <strong>DatagramPacket</strong> và <strong>DatagramSocket</strong> giúp việc lập trình mạng trở nên dễ dàng và nhanh chóng.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Blog 07_ Kỹ thuật đa tiến tình và tuần tự hóa ... Ứng dụng mạng</title>
         <author>
@@ -1078,7 +1423,10 @@ public class ExecutorExample {
 </li>
 </ul>
 <div><hr></div>
-<p>Cảm ơn bạn đã đọc bài viết! Nếu bạn có cùng sở thích hoặc muốn trao đổi thêm về lập trình mạng, đừng ngần ngại liên hệ với tôi. Hành trình của chúng ta sẽ trở nên thú vị hơn khi có những người bạn đồng hành!</p>
+<p>Cảm ơn bạn đã đọc bài viết! Nếu bạn có cùng sở thích hoặc muốn trao đổi thêm về lập trình mạng, đừng ngần ngại liên hệ với tôi. Hành trình của chúng ta sẽ trở nên thú vị hơn khi có những người bạn đồng hành! Sau đây là một số chứng chỉ mà tôi đã đạt được trong quá trình học môn Lập trình mạng máy tính:</p>
+<figure class="post__image"><img  src="https://github.com/quangminh2k3/my1blog.git/media/posts/1/JavaScript_Essentials_1_Badge20241214-28-wxy1fw.pdf" alt="" width="NaN" height="NaN"></figure>            <figure class="post__image"><img loading="lazy"  src="https://github.com/quangminh2k3/my1blog.git/media/posts/1/1.png" alt="" width="544" height="421" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://github.com/quangminh2k3/my1blog.git/media/posts/1/responsive/1-xs.png 640w ,https://github.com/quangminh2k3/my1blog.git/media/posts/1/responsive/1-sm.png 768w ,https://github.com/quangminh2k3/my1blog.git/media/posts/1/responsive/1-md.png 1024w ,https://github.com/quangminh2k3/my1blog.git/media/posts/1/responsive/1-lg.png 1366w ,https://github.com/quangminh2k3/my1blog.git/media/posts/1/responsive/1-xl.png 1600w ,https://github.com/quangminh2k3/my1blog.git/media/posts/1/responsive/1-2xl.png 1920w"> </figure>
+<figure class="post__image">           <img loading="lazy"  src="https://github.com/quangminh2k3/my1blog.git/media/posts/1/2.png" alt="" width="549" height="425" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://github.com/quangminh2k3/my1blog.git/media/posts/1/responsive/2-xs.png 640w ,https://github.com/quangminh2k3/my1blog.git/media/posts/1/responsive/2-sm.png 768w ,https://github.com/quangminh2k3/my1blog.git/media/posts/1/responsive/2-md.png 1024w ,https://github.com/quangminh2k3/my1blog.git/media/posts/1/responsive/2-lg.png 1366w ,https://github.com/quangminh2k3/my1blog.git/media/posts/1/responsive/2-xl.png 1600w ,https://github.com/quangminh2k3/my1blog.git/media/posts/1/responsive/2-2xl.png 1920w"> </figure>
+<figure class="post__image">          <img loading="lazy"  src="https://github.com/quangminh2k3/my1blog.git/media/posts/1/3.png" alt="" width="531" height="409" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://github.com/quangminh2k3/my1blog.git/media/posts/1/responsive/3-xs.png 640w ,https://github.com/quangminh2k3/my1blog.git/media/posts/1/responsive/3-sm.png 768w ,https://github.com/quangminh2k3/my1blog.git/media/posts/1/responsive/3-md.png 1024w ,https://github.com/quangminh2k3/my1blog.git/media/posts/1/responsive/3-lg.png 1366w ,https://github.com/quangminh2k3/my1blog.git/media/posts/1/responsive/3-xl.png 1600w ,https://github.com/quangminh2k3/my1blog.git/media/posts/1/responsive/3-2xl.png 1920w"></figure>
             ]]>
         </content>
     </entry>
