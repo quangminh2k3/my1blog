@@ -3,12 +3,148 @@
     <title>MyBlog</title>
     <link href="https://github.com/quangminh2k3/my1blog.git/feed.xml" rel="self" />
     <link href="https://github.com/quangminh2k3/my1blog.git" />
-    <updated>2024-12-26T13:11:12+07:00</updated>
+    <updated>2024-12-26T13:19:54+07:00</updated>
     <author>
         <name>Lâm Quang Minh</name>
     </author>
     <id>https://github.com/quangminh2k3/my1blog.git</id>
 
+    <entry>
+        <title>Blog 04_ Lập trình đa tuyến</title>
+        <author>
+            <name>Lâm Quang Minh</name>
+        </author>
+        <link href="https://github.com/quangminh2k3/my1blog.git/blog-04_-lap-trinh-da-tuyen.html"/>
+        <id>https://github.com/quangminh2k3/my1blog.git/blog-04_-lap-trinh-da-tuyen.html</id>
+
+        <updated>2024-12-26T13:19:54+07:00</updated>
+            <summary>
+                <![CDATA[
+                    Tổng Quan Về Lập Trình Mạng 1. Lập Trình Mạng Là Gì? Lập trình mạng là quá trình xây dựng các ứng dụng phần mềm có khả năng giao tiếp và truyền dữ liệu qua mạng máy tính. Nó cho phép các thiết bị khác&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h3>Tổng Quan Về Lập Trình Mạng</h3>
+<h4>1. Lập Trình Mạng Là Gì?</h4>
+<p>Lập trình mạng là quá trình xây dựng các ứng dụng phần mềm có khả năng giao tiếp và truyền dữ liệu qua mạng máy tính. Nó cho phép các thiết bị khác nhau kết nối và chia sẻ thông tin, từ đó tạo ra các hệ thống phân tán và ứng dụng web động.</p>
+<p>Lập trình mạng sử dụng các giao thức truyền thông để đảm bảo dữ liệu được gửi và nhận đúng cách giữa các thiết bị. Nó là một phần quan trọng trong phát triển ứng dụng hiện đại như các ứng dụng web, trò chuyện trực tuyến, dịch vụ phát trực tuyến và IoT.</p>
+<figure class="post__image">                <img loading="lazy"  src="https://github.com/quangminh2k3/my1blog.git/media/posts/22/IMG_T5VHKSQYHV4VT8WB-3.png" alt="" width="1200" height="526" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://github.com/quangminh2k3/my1blog.git/media/posts/22/responsive/IMG_T5VHKSQYHV4VT8WB-3-xs.png 640w ,https://github.com/quangminh2k3/my1blog.git/media/posts/22/responsive/IMG_T5VHKSQYHV4VT8WB-3-sm.png 768w ,https://github.com/quangminh2k3/my1blog.git/media/posts/22/responsive/IMG_T5VHKSQYHV4VT8WB-3-md.png 1024w ,https://github.com/quangminh2k3/my1blog.git/media/posts/22/responsive/IMG_T5VHKSQYHV4VT8WB-3-lg.png 1366w ,https://github.com/quangminh2k3/my1blog.git/media/posts/22/responsive/IMG_T5VHKSQYHV4VT8WB-3-xl.png 1600w ,https://github.com/quangminh2k3/my1blog.git/media/posts/22/responsive/IMG_T5VHKSQYHV4VT8WB-3-2xl.png 1920w">                       </figure>
+<hr>
+<h4>2. Vai Trò Của Ứng Dụng Mạng</h4>
+<p>Ứng dụng mạng đóng vai trò then chốt trong việc kết nối người dùng và thiết bị. Dưới đây là một số vai trò quan trọng:</p>
+<ul>
+<li><strong>Trao Đổi Thông Tin:</strong> Hỗ trợ truyền dữ liệu giữa các thiết bị thông qua mạng nội bộ hoặc Internet.</li>
+<li><strong>Giao Tiếp Theo Thời Gian Thực:</strong> Các ứng dụng như tin nhắn tức thời hoặc gọi video hoạt động theo cơ chế giao tiếp ngay lập tức.</li>
+<li><strong>Chia Sẻ Tài Nguyên:</strong> Cho phép nhiều người dùng truy cập chung một tài nguyên, chẳng hạn như máy in, máy chủ hoặc cơ sở dữ liệu.</li>
+<li><strong>Hỗ Trợ Thương Mại Điện Tử:</strong> Các hệ thống thanh toán trực tuyến và giỏ hàng điện tử giúp người dùng mua sắm qua mạng dễ dàng.</li>
+<li><strong>Quản Lý Từ Xa:</strong> Điều khiển thiết bị và giám sát hệ thống từ xa thông qua mạng.</li>
+</ul>
+<hr>
+<h4>3. Các Giao Thức Mạng Cơ Bản</h4>
+<p>Giao thức mạng là tập hợp các quy tắc xác định cách thức trao đổi dữ liệu trên mạng. Một số giao thức phổ biến gồm:</p>
+<p><strong>1. TCP/IP (Transmission Control Protocol/Internet Protocol):</strong></p>
+<ul>
+<li><strong>TCP</strong> đảm bảo dữ liệu được truyền tin cậy và theo đúng thứ tự.</li>
+<li><strong>IP</strong> định tuyến dữ liệu từ nguồn đến đích thông qua địa chỉ IP.</li>
+</ul>
+<p><strong>2. HTTP/HTTPS (HyperText Transfer Protocol):</strong></p>
+<ul>
+<li>Được sử dụng để truyền siêu văn bản trên World Wide Web.</li>
+<li><strong>HTTPS</strong> bổ sung thêm lớp mã hóa SSL/TLS để bảo mật dữ liệu.</li>
+</ul>
+<p><strong>3. FTP (File Transfer Protocol):</strong></p>
+<ul>
+<li>Giao thức dùng để truyền tải tập tin giữa các máy tính.</li>
+</ul>
+<p><strong>4. SMTP và POP3/IMAP:</strong></p>
+<ul>
+<li><strong>SMTP</strong> (Simple Mail Transfer Protocol) được sử dụng để gửi email.</li>
+<li><strong>POP3</strong> (Post Office Protocol) và <strong>IMAP</strong> (Internet Message Access Protocol) để nhận email.</li>
+</ul>
+<p><strong>5. WebSocket:</strong></p>
+<ul>
+<li>Hỗ trợ giao tiếp hai chiều giữa máy khách và máy chủ, thích hợp cho các ứng dụng thời gian thực như trò chuyện hoặc game trực tuyến.</li>
+</ul>
+<p><strong>6. DNS (Domain Name System):</strong></p>
+<ul>
+<li>Chuyển đổi tên miền dễ đọc thành địa chỉ IP để kết nối các máy chủ.</li>
+</ul>
+<hr>
+<h4>4. Các Công Cụ Và Công Nghệ Phổ Biến Trong Lập Trình Mạng</h4>
+<ul>
+<li><strong>Socket Programming:</strong> Cho phép tạo kết nối mạng giữa hai ứng dụng thông qua giao thức TCP hoặc UDP.</li>
+<li><strong>API RESTful và GraphQL:</strong> Hỗ trợ xây dựng giao diện lập trình ứng dụng để giao tiếp giữa các hệ thống khác nhau.</li>
+<li><strong>Frameworks phổ biến:</strong> Node.js (JavaScript), Flask/Django (Python), Spring Boot (Java).</li>
+<li><strong>Công nghệ mã hóa:</strong> SSL/TLS để đảm bảo an toàn dữ liệu khi truyền qua mạng.</li>
+</ul>
+<hr>
+<h4>5. Tầm Quan Trọng Của Bảo Mật Mạng</h4>
+<p>Lập trình mạng không thể thiếu yếu tố bảo mật để bảo vệ dữ liệu trước các cuộc tấn công mạng. Các kỹ thuật bảo mật bao gồm:</p>
+<ul>
+<li><strong>Mã hóa dữ liệu:</strong> Bảo vệ dữ liệu khi truyền qua mạng bằng các thuật toán mã hóa như AES hoặc RSA.</li>
+<li><strong>Chứng chỉ số (SSL/TLS):</strong> Đảm bảo kết nối an toàn giữa máy chủ và máy khách.</li>
+<li><strong>Tường lửa (Firewall):</strong> Ngăn chặn truy cập trái phép.</li>
+<li><strong>VPN (Virtual Private Network):</strong> Tạo kết nối bảo mật qua mạng công cộng.</li>
+</ul>
+<hr>
+<h3>Tổng Quan Về Lập Trình Đa Tuyến</h3>
+<h4>1. Giới Thiệu Về Lập Trình Đa Tuyến</h4>
+<p>Lập trình đa tuyến (Multithreading) là kỹ thuật cho phép một chương trình thực thi nhiều luồng (threads) cùng lúc. Điều này giúp tăng hiệu suất và khả năng xử lý đa nhiệm của ứng dụng.</p>
+<hr>
+<h4>2. Lớp Thread và Giao Diện Runnable</h4>
+<ul>
+<li><strong>Lớp Thread:</strong> Java cung cấp lớp <code>Thread</code> để tạo và quản lý các luồng. Một luồng có thể được tạo bằng cách kế thừa lớp <code>Thread</code> và ghi đè phương thức <code>run()</code>.</li>
+<li><strong>Giao Diện Runnable:</strong> Một cách khác để tạo luồng là triển khai giao diện <code>Runnable</code> và truyền nó vào một đối tượng <code>Thread</code>.</li>
+</ul>
+<p>Ví dụ:</p>
+<pre><code class="language-java">class MyThread extends Thread {
+    public void run() {
+        System.out.println("Luồng đang chạy...");
+    }
+}
+
+MyThread thread = new MyThread();
+thread.start();
+</code></pre>
+<hr>
+<h4>3. Đồng Bộ Hóa (Synchronization)</h4>
+<p>Đồng bộ hóa giúp ngăn chặn các luồng truy cập cùng lúc vào tài nguyên chia sẻ, tránh xung đột dữ liệu. Java hỗ trợ đồng bộ hóa qua từ khóa <code>synchronized</code>.</p>
+<p>Ví dụ:</p>
+<pre><code class="language-java">class Counter {
+    private int count = 0;
+
+    public synchronized void increment() {
+        count++;
+    }
+
+    public int getCount() {
+        return count;
+    }
+}
+</code></pre>
+<hr>
+<h4>4. Trao Đổi Dữ Liệu Giữa Các Luồng</h4>
+<p>Java cung cấp các cơ chế như <code>wait()</code>, <code>notify()</code>, và <code>notifyAll()</code> để quản lý sự phối hợp giữa các luồng.</p>
+<p>Ví dụ:</p>
+<pre><code class="language-java">class SharedData {
+    synchronized void produce() throws InterruptedException {
+        wait();
+        System.out.println("Dữ liệu được sản xuất.");
+    }
+
+    synchronized void consume() {
+        notify();
+        System.out.println("Dữ liệu được tiêu thụ.");
+    }
+}
+</code></pre>
+<hr>
+<h3>Kết Luận</h3>
+<p>Lập trình mạng và lập trình đa tuyến là hai lĩnh vực quan trọng trong phát triển phần mềm hiện đại. Việc nắm vững các khái niệm về giao thức mạng và quản lý luồng sẽ giúp lập trình viên xây dựng ứng dụng hiệu suất cao và đáng tin cậy.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Blog 03_ Tổng quan về lập trình mạng</title>
         <author>
