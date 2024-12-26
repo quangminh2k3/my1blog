@@ -3,12 +3,210 @@
     <title>MyBlog</title>
     <link href="https://github.com/quangminh2k3/my1blog.git/feed.xml" rel="self" />
     <link href="https://github.com/quangminh2k3/my1blog.git" />
-    <updated>2024-12-26T12:43:57+07:00</updated>
+    <updated>2024-12-26T13:11:12+07:00</updated>
     <author>
         <name>Lâm Quang Minh</name>
     </author>
     <id>https://github.com/quangminh2k3/my1blog.git</id>
 
+    <entry>
+        <title>Blog 03_ Tổng quan về lập trình mạng</title>
+        <author>
+            <name>Lâm Quang Minh</name>
+        </author>
+        <link href="https://github.com/quangminh2k3/my1blog.git/blog-03_.html"/>
+        <id>https://github.com/quangminh2k3/my1blog.git/blog-03_.html</id>
+
+        <updated>2024-12-26T12:58:39+07:00</updated>
+            <summary>
+                <![CDATA[
+                    Tổng Quan Về Lập Trình Mạng 1. Lập Trình Mạng Là Gì? Lập trình mạng là quá trình xây dựng các ứng dụng phần mềm có khả năng giao tiếp và truyền dữ liệu qua mạng máy tính. Nó cho phép các thiết bị khác&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h3 data-pm-slice="1 1 []">Tổng Quan Về Lập Trình Mạng</h3>
+<h4>1. Lập Trình Mạng Là Gì?</h4>
+<p>Lập trình mạng là quá trình xây dựng các ứng dụng phần mềm có khả năng giao tiếp và truyền dữ liệu qua mạng máy tính. Nó cho phép các thiết bị khác nhau kết nối và chia sẻ thông tin, từ đó tạo ra các hệ thống phân tán và ứng dụng web động.</p>
+<p>Lập trình mạng sử dụng các giao thức truyền thông để đảm bảo dữ liệu được gửi và nhận đúng cách giữa các thiết bị. Nó là một phần quan trọng trong phát triển ứng dụng hiện đại như các ứng dụng web, trò chuyện trực tuyến, dịch vụ phát trực tuyến và IoT.</p>
+<p>                      <img loading="lazy" src="https://gpcoder.com/wp-content/uploads/2018/03/java-networking.png" alt="Lập trình mạng với java - GP Coder (Lập trình Java)" width="468" height="319" data-is-external-image="true"></p>
+<div><hr></div>
+<h4>2. Vai Trò Của Ứng Dụng Mạng</h4>
+<p>Ứng dụng mạng đóng vai trò then chốt trong việc kết nối người dùng và thiết bị. Dưới đây là một số vai trò quan trọng:</p>
+<ul data-spread="false">
+<li>
+<p><strong>Trao Đổi Thông Tin:</strong> Hỗ trợ truyền dữ liệu giữa các thiết bị thông qua mạng nội bộ hoặc Internet.</p>
+</li>
+<li>
+<p><strong>Giao Tiếp Theo Thời Gian Thực:</strong> Các ứng dụng như tin nhắn tức thời hoặc gọi video hoạt động theo cơ chế giao tiếp ngay lập tức.</p>
+</li>
+<li>
+<p><strong>Chia Sẻ Tài Nguyên:</strong> Cho phép nhiều người dùng truy cập chung một tài nguyên, chẳng hạn như máy in, máy chủ hoặc cơ sở dữ liệu.</p>
+</li>
+<li>
+<p><strong>Hỗ Trợ Thương Mại Điện Tử:</strong> Các hệ thống thanh toán trực tuyến và giỏ hàng điện tử giúp người dùng mua sắm qua mạng dễ dàng.</p>
+</li>
+<li>
+<p><strong>Quản Lý Từ Xa:</strong> Điều khiển thiết bị và giám sát hệ thống từ xa thông qua mạng.</p>
+</li>
+</ul>
+<div><hr></div>
+<h4>3. Các Giao Thức Mạng Cơ Bản</h4>
+<p>Giao thức mạng là tập hợp các quy tắc xác định cách thức trao đổi dữ liệu trên mạng. Một số giao thức phổ biến gồm:</p>
+<p><strong>1. TCP/IP (Transmission Control Protocol/Internet Protocol):</strong></p>
+<ul data-spread="false">
+<li>
+<p><strong>TCP</strong> đảm bảo dữ liệu được truyền tin cậy và theo đúng thứ tự.</p>
+</li>
+<li>
+<p><strong>IP</strong> định tuyến dữ liệu từ nguồn đến đích thông qua địa chỉ IP.</p>
+</li>
+</ul>
+<p><strong>2. HTTP/HTTPS (HyperText Transfer Protocol):</strong></p>
+<ul data-spread="false">
+<li>
+<p>Được sử dụng để truyền siêu văn bản trên World Wide Web.</p>
+</li>
+<li>
+<p><strong>HTTPS</strong> bổ sung thêm lớp mã hóa SSL/TLS để bảo mật dữ liệu.</p>
+</li>
+</ul>
+<p><strong>3. FTP (File Transfer Protocol):</strong></p>
+<ul data-spread="false">
+<li>
+<p>Giao thức dùng để truyền tải tập tin giữa các máy tính.</p>
+</li>
+</ul>
+<p><strong>4. SMTP và POP3/IMAP:</strong></p>
+<ul data-spread="false">
+<li>
+<p><strong>SMTP</strong> (Simple Mail Transfer Protocol) được sử dụng để gửi email.</p>
+</li>
+<li>
+<p><strong>POP3</strong> (Post Office Protocol) và <strong>IMAP</strong> (Internet Message Access Protocol) để nhận email.</p>
+</li>
+</ul>
+<p><strong>5. WebSocket:</strong></p>
+<ul data-spread="false">
+<li>
+<p>Hỗ trợ giao tiếp hai chiều giữa máy khách và máy chủ, thích hợp cho các ứng dụng thời gian thực như trò chuyện hoặc game trực tuyến.</p>
+</li>
+</ul>
+<p><strong>6. DNS (Domain Name System):</strong></p>
+<ul data-spread="false">
+<li>
+<p>Chuyển đổi tên miền dễ đọc thành địa chỉ IP để kết nối các máy chủ.</p>
+</li>
+</ul>
+<div><hr></div>
+<h4>4. Các Công Cụ Và Công Nghệ Phổ Biến Trong Lập Trình Mạng</h4>
+<ul data-spread="false">
+<li>
+<p><strong>Socket Programming:</strong> Cho phép tạo kết nối mạng giữa hai ứng dụng thông qua giao thức TCP hoặc UDP.</p>
+</li>
+<li>
+<p><strong>API RESTful và GraphQL:</strong> Hỗ trợ xây dựng giao diện lập trình ứng dụng để giao tiếp giữa các hệ thống khác nhau.</p>
+</li>
+<li>
+<p><strong>Frameworks phổ biến:</strong> Node.js (JavaScript), Flask/Django (Python), Spring Boot (Java).</p>
+</li>
+<li>
+<p><strong>Công nghệ mã hóa:</strong> SSL/TLS để đảm bảo an toàn dữ liệu khi truyền qua mạng.</p>
+</li>
+</ul>
+<div><hr></div>
+<h4>5. Tầm Quan Trọng Của Bảo Mật Mạng</h4>
+<p>Lập trình mạng không thể thiếu yếu tố bảo mật để bảo vệ dữ liệu trước các cuộc tấn công mạng. Các kỹ thuật bảo mật bao gồm:</p>
+<ul data-spread="false">
+<li>
+<p><strong>Mã hóa dữ liệu:</strong> Bảo vệ dữ liệu khi truyền qua mạng bằng các thuật toán mã hóa như AES hoặc RSA.</p>
+</li>
+<li>
+<p><strong>Chứng chỉ số (SSL/TLS):</strong> Đảm bảo kết nối an toàn giữa máy chủ và máy khách.</p>
+</li>
+<li>
+<p><strong>Tường lửa (Firewall):</strong> Ngăn chặn truy cập trái phép.</p>
+</li>
+<li>
+<p><strong>VPN (Virtual Private Network):</strong> Tạo kết nối bảo mật qua mạng công cộng.</p>
+</li>
+</ul>
+<div><hr></div>
+<h3>Kết Luận</h3>
+<p>Lập trình mạng là một lĩnh vực không thể thiếu trong phát triển phần mềm hiện đại. Nó mở ra nhiều cơ hội để tạo ra các ứng dụng kết nối mạnh mẽ và an toàn. Việc nắm vững các giao thức, công cụ và phương pháp bảo mật sẽ giúp lập trình viên xây dựng những hệ thống hiệu quả và đáng tin cậy. Để bắt đầu, hãy thực hành lập trình socket và tìm hiểu các API RESTful, đồng thời luôn chú trọng đến bảo mật trong mọi bước phát triển ứng dụng mạng.</p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Blog 02_ Giới thiệu về JavaScript</title>
+        <author>
+            <name>Lâm Quang Minh</name>
+        </author>
+        <link href="https://github.com/quangminh2k3/my1blog.git/blog-02_.html"/>
+        <id>https://github.com/quangminh2k3/my1blog.git/blog-02_.html</id>
+
+        <updated>2024-12-26T12:57:45+07:00</updated>
+            <summary>
+                <![CDATA[
+                    JavaScript Là Gì? JavaScript (JS) là một ngôn ngữ lập trình mạnh mẽ, được sử dụng rộng rãi để phát triển các ứng dụng web. Ra đời vào năm 1995 bởi Brendan Eich, JavaScript ban đầu được thiết kế để tăng cường tính tương tác&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2>JavaScript Là Gì?</h2>
+<p>JavaScript (JS) là một ngôn ngữ lập trình mạnh mẽ, được sử dụng rộng rãi để phát triển các ứng dụng web. Ra đời vào năm 1995 bởi Brendan Eich, JavaScript ban đầu được thiết kế để tăng cường tính tương tác cho các trang web. Khác với Java, JavaScript là một ngôn ngữ dựa trên trình duyệt, mang đến khả năng xử lý động trên các ứng dụng web.</p>
+<h3>Vai Trò Của JavaScript Trong Phát Triển Web</h3>
+<ul>
+<li><strong>Front-end</strong>: JavaScript giúp tạo ra các giao diện người dùng sinh động và thân thiện. Nó thường được kết hợp với HTML và CSS để phát triển các ứng dụng web hiện đại.</li>
+<li><strong>Back-end</strong>: Với sự ra đời của Node.js, JavaScript đã mở rộng phạm vi của mình, cho phép lập trình viên xây dựng máy chủ và xử lý các ứng dụng phía máy chủ.</li>
+<li><strong>Full-stack</strong>: Một lập trình viên JavaScript hiện nay có thể làm việc ở cả front-end và back-end, biến JavaScript trở thành một công cụ đa năng.</li>
+</ul>
+<hr>
+<h2>Tại Sao Nên Học JavaScript?</h2>
+<ol>
+<li><strong>Ngôn Ngữ Được Yêu Thích Hàng Đầu</strong>: JavaScript đã giữ vững vị trí là ngôn ngữ phổ biến nhất trên thế giới theo khảo sát của Stack Overflow trong nhiều năm.</li>
+<li><strong>Cộng Đồng Lớn Mạnh</strong>: Hàng triệu lập trình viên sử dụng JavaScript, cung cấp nhiều tài liệu, thư viện và hỗ trợ từ cộng đồng.</li>
+<li><strong>Tính Ứng Dụng Cao</strong>: Từ việc xây dựng trang web, phát triển ứng dụng di động đến xử lý IoT, JavaScript đều có mặt.</li>
+</ol>
+<hr>
+<h2>Cách Học JavaScript Hiệu Quả</h2>
+<h3>1. <strong>Thiết Lập Môi Trường Học Tập</strong></h3>
+<ul>
+<li><strong>Công cụ cần thiết</strong>: Một trình duyệt hiện đại (Chrome, Firefox) và một trình soạn thảo mã nguồn (VS Code, Sublime Text).</li>
+<li><strong>Viết và chạy mã đầu tiên</strong>: Tạo file HTML và kết nối file JavaScript để chạy chương trình "Hello, World!".</li>
+</ul>
+<h3>2. <strong>Học Qua Ví Dụ Thực Tế</strong></h3>
+<ul>
+<li>Tạo các hiệu ứng động trên trang web như bật/tắt đèn (light switch).</li>
+<li>Xây dựng các ứng dụng đơn giản như máy tính hoặc danh sách việc cần làm (to-do list).</li>
+</ul>
+<h3>3. <strong>Thực Hành DOM và Xử Lý Sự Kiện</strong></h3>
+<ul>
+<li><strong>DOM</strong>: Làm quen với cách truy xuất và thao tác các phần tử trên trang web.</li>
+<li><strong>Sự kiện</strong>: Học cách phản hồi hành động người dùng như click chuột, nhập liệu.</li>
+</ul>
+<figure class="post__image">                                <img loading="lazy"  src="file:///C:/Users/lamqu/OneDrive/Tài liệu/Publii/sites/myblog/input/media/posts/5/javascript-la-gi-ung-dung-cua-javascript.jpg" alt="" width="417" height="453" sizes="(max-width: 1920px) 100vw, 1920px" srcset="file:///C:/Users/lamqu/OneDrive/Tài%20liệu/Publii/sites/myblog/input/media/posts/5/responsive/javascript-la-gi-ung-dung-cua-javascript-xs.jpg 640w ,file:///C:/Users/lamqu/OneDrive/Tài%20liệu/Publii/sites/myblog/input/media/posts/5/responsive/javascript-la-gi-ung-dung-cua-javascript-sm.jpg 768w ,file:///C:/Users/lamqu/OneDrive/Tài%20liệu/Publii/sites/myblog/input/media/posts/5/responsive/javascript-la-gi-ung-dung-cua-javascript-md.jpg 1024w ,file:///C:/Users/lamqu/OneDrive/Tài%20liệu/Publii/sites/myblog/input/media/posts/5/responsive/javascript-la-gi-ung-dung-cua-javascript-lg.jpg 1366w ,file:///C:/Users/lamqu/OneDrive/Tài%20liệu/Publii/sites/myblog/input/media/posts/5/responsive/javascript-la-gi-ung-dung-cua-javascript-xl.jpg 1600w ,file:///C:/Users/lamqu/OneDrive/Tài%20liệu/Publii/sites/myblog/input/media/posts/5/responsive/javascript-la-gi-ung-dung-cua-javascript-2xl.jpg 1920w"></figure>
+<hr>
+<h2>Những Tính Năng Nổi Bật Của ES6+</h2>
+<p>ES6 (ECMAScript 6) đã mang đến một loạt cải tiến giúp lập trình JavaScript dễ dàng hơn:</p>
+<ul>
+<li><strong>Arrow Functions</strong>: Cú pháp gọn gàng hơn cho các hàm.</li>
+<li><strong>Template Literals</strong>: Cho phép chèn biến trực tiếp vào chuỗi.</li>
+<li><strong>Modules</strong>: Quản lý mã nguồn tốt hơn với khả năng chia tách module.</li>
+</ul>
+<hr>
+<h2>Định Hướng Tương Lai Với JavaScript</h2>
+<p>Với JavaScript, bạn có thể khám phá nhiều lĩnh vực thú vị như:</p>
+<ul>
+<li><strong>Phát triển web</strong>: Sử dụng các framework như React, Angular, hoặc Vue.js.</li>
+<li><strong>Ứng dụng di động</strong>: Dùng React Native hoặc Flutter để phát triển ứng dụng đa nền tảng.</li>
+<li><strong>Trí tuệ nhân tạo (AI)</strong>: Kết hợp với các thư viện như TensorFlow.js để xây dựng các ứng dụng AI.</li>
+</ul>
+<p>JavaScript không chỉ là một ngôn ngữ lập trình mà còn là cánh cửa mở ra thế giới công nghệ hiện đại. Nếu bạn đang tìm kiếm một ngôn ngữ để bắt đầu hoặc phát triển sự nghiệp, JavaScript chắc chắn là một lựa chọn không thể bỏ qua.</p>
+<p><br><br></p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Blog 01_ Tôi đã học lập trình web như thế nào?</title>
         <author>
