@@ -3,12 +3,190 @@
     <title>MyBlog</title>
     <link href="https://github.com/quangminh2k3/my1blog.git/feed.xml" rel="self" />
     <link href="https://github.com/quangminh2k3/my1blog.git" />
-    <updated>2024-12-26T13:43:12+07:00</updated>
+    <updated>2024-12-26T14:08:31+07:00</updated>
     <author>
         <name>Lâm Quang Minh</name>
     </author>
     <id>https://github.com/quangminh2k3/my1blog.git</id>
 
+    <entry>
+        <title>Blog 07_ Kỹ thuật đa tiến tình và tuần tự hóa ... Ứng dụng mạng</title>
+        <author>
+            <name>Lâm Quang Minh</name>
+        </author>
+        <link href="https://github.com/quangminh2k3/my1blog.git/blog-07_-ky-thuat-da-tien-tinh-va-tuan-tu-hoa-ung-dung-mang.html"/>
+        <id>https://github.com/quangminh2k3/my1blog.git/blog-07_-ky-thuat-da-tien-tinh-va-tuan-tu-hoa-ung-dung-mang.html</id>
+
+        <updated>2024-12-26T13:59:59+07:00</updated>
+            <summary>
+                <![CDATA[
+                    1. Giới Thiệu Lập trình mạng là một lĩnh vực được sử dụng rộng rãi trong việc phát triển các hệ thống giao tiếp dữ liệu giữa các thiết bị. Trong đó, kỹ thuật đa tiến trình (multithreading) và tuần tự hóa (serialization) là hai&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2 data-pm-slice="1 1 []">1. Giới Thiệu</h2>
+<p>Lập trình mạng là một lĩnh vực được sử dụng rộng rãi trong việc phát triển các hệ thống giao tiếp dữ liệu giữa các thiết bị. Trong đó, kỹ thuật đa tiến trình (multithreading) và tuần tự hóa (serialization) là hai kỹ thuật quản trọng giúp tối ưu hóa hiệu năng và linh hoạt trong việc xây dựng các ứng dụng mạng. Bài viết này sẽ trình bày chi tiết về hai kỹ thuật này, cách áp dụng trong môi trường Java, và một số ví dụ minh họạ.</p>
+<div><hr></div>
+<h2>2. Kỹ Thuật Đa Tiến Trình (Multithreading)</h2>
+<h3>2.1. Khái Niệm</h3>
+<p>Đa tiến trình (multithreading) là kỹ thuật cho phép chương trình thực thi nhiều tiến trình (được gọi là thread) cùng lúc. Mỗi thread hoạt động như một đơn vị thực thi độc lập trong chương trình.</p>
+<h3>2.2. Lợi ích Của Đa Tiến Trình</h3>
+<ul data-spread="false">
+<li>
+<p><strong>Hiệu năng cao</strong>: Cho phép chương trình thực thi các tác vụ độc lập song song, giảm thời gian chờ.</p>
+</li>
+<li>
+<p><strong>Khả năng đáp ứng tốt hơn</strong>: Ứng dụng có thể xử lý nhiều tác vụ song song như giao diện người dùng, truy vấn dữ liệu.</p>
+</li>
+<li>
+<p><strong>Khai thác tối ưu CPU</strong>: Nhiều thread cho phép khai thác tối đa tài nguyên CPU.</p>
+</li>
+</ul>
+<h3>2.3. Thread Trong Java</h3>
+<p>Trong Java, kỹ thuật đa tiến trình được hỗ trợ bởi lớp <code>Thread</code> và giao diện <code>Runnable</code>.</p>
+<h4>Tạo Thread Bằng Lớp <code>Thread</code></h4>
+<pre><code>class MyThread extends Thread {
+    public void run() {
+        System.out.println("Thread " + Thread.currentThread().getId() + " đang chạy.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 0; i &lt; 5; i++) {
+            MyThread thread = new MyThread();
+            thread.start();
+        }
+    }
+}</code></pre>
+<h4>Tạo Thread Bằng Giao Diện <code>Runnable</code></h4>
+<pre><code>class MyRunnable implements Runnable {
+    public void run() {
+        System.out.println("Thread " + Thread.currentThread().getId() + " đang chạy.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 0; i &lt; 5; i++) {
+            Thread thread = new Thread(new MyRunnable());
+            thread.start();
+        }
+    }
+}</code></pre>
+<h3>2.4. Đa Tiến Trình Trong Lập Trình Mạng</h3>
+<p>Trong lập trình mạng, đa tiến trình được sử dụng để xử lý nhiều client cùng lúc. Sau đây là ví dụ server xử lý nhiều client.</p>
+<h4>Ví Dụ: Server Đa Tiến Trình</h4>
+<pre><code>import java.io.*;
+import java.net.*;
+
+class ClientHandler extends Thread {
+    private Socket socket;
+
+    public ClientHandler(Socket socket) {
+        this.socket = socket;
+    }
+
+    public void run() {
+        try {
+            InputStream input = socket.getInputStream();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(input));
+
+            OutputStream output = socket.getOutputStream();
+            PrintWriter writer = new PrintWriter(output, true);
+
+            String message;
+            while ((message = reader.readLine()) != null) {
+                System.out.println("Client: " + message);
+                writer.println("Server đã nhận: " + message);
+            }
+
+            socket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+public class MultiThreadedServer {
+    public static void main(String[] args) {
+        try (ServerSocket serverSocket = new ServerSocket(7000)) {
+            System.out.println("Server đang lắng nghe trên cổng 7000...");
+
+            while (true) {
+                Socket socket = serverSocket.accept();
+                System.out.println("Client kết nối.");
+
+                ClientHandler handler = new ClientHandler(socket);
+                handler.start();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+<div><hr></div>
+<h2>3. Tuần Tự Hóa Đối Tượng (Serialization)</h2>
+<h3>3.1. Khái Niệm</h3>
+<p>Tuần tự hóa (“serialization”) là quá trình chuyển đổi trạng thái của đối tượng thành dữ liệu dạng byte (để truyền qua mạng hoặc lưu trữ). Trong Java, điều này được thực hiện bằng giao diện <code>Serializable</code>.</p>
+<h3>3.2. Ưu Điểm Của Tuần Tự Hóa</h3>
+<ul data-spread="false">
+<li>
+<p><strong>Lưu trữ dữ liệu</strong>: Lưu trữ trạng thái đối tượng.</p>
+</li>
+<li>
+<p><strong>Truyền dữ liệu qua mạng</strong>: Truyền trực tiếp đối tượng.</p>
+</li>
+</ul>
+<h3>3.3. Ví Dụ Tuần Tự Hóa</h3>
+<h4>Tuần Tự Hóa Đối Tượng</h4>
+<pre><code>import java.io.*;
+
+class Student implements Serializable {
+    private String name;
+    private int age;
+
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String toString() {
+        return "Student{name='" + name + "', age=" + age + "}";
+    }
+}
+
+public class SerializationExample {
+    public static void main(String[] args) {
+        try {
+            // Tuần tự hóa
+            Student student = new Student("Nguyen Van A", 20);
+            FileOutputStream fileOut = new FileOutputStream("student.ser");
+            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            out.writeObject(student);
+            out.close();
+            fileOut.close();
+
+            // Phân tự hóa
+            FileInputStream fileIn = new FileInputStream("student.ser");
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            Student deserializedStudent = (Student) in.readObject();
+            in.close();
+            fileIn.close();
+
+            System.out.println("Student sau khi phân tự hóa: " + deserializedStudent);
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+<div><hr></div>
+<h2>4. Kết Luận</h2>
+<p>Kỹ thuật đa tiến trình và tuần tự hóa đóng vai trò quản trọng trong việc xây dựng các ứng dụng mạng. Chúng giúp nâng cao hiệu năng và tính linh hoạt trong xử lý dữ liệu, mang đến những trải nghiệm tốt nhất cho người dùng.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Blog 06_ Lập trình Socket cho giao thức TCP</title>
         <author>
