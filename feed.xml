@@ -3,7 +3,7 @@
     <title>MyBlog</title>
     <link href="https://github.com/quangminh2k3/my1blog.git/feed.xml" rel="self" />
     <link href="https://github.com/quangminh2k3/my1blog.git" />
-    <updated>2024-12-25T22:53:38+07:00</updated>
+    <updated>2024-12-26T10:50:19+07:00</updated>
     <author>
         <name>Lâm Quang Minh</name>
     </author>
@@ -20,13 +20,63 @@
         <updated>2024-12-25T22:00:27+07:00</updated>
             <summary>
                 <![CDATA[
-                    vưevwevwevewvwes ewvwevwevwevwe
+                    Giới thiệu bản thân © 2024 - Blog cá nhân của tôi
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <p>vưevwevwevewvwes</p>
-<p>ewvwevwevwevwe</p>
+                <h1>Giới thiệu bản thân</h1>
+<div id="content"></div>
+<footer>© 2024 - Blog cá nhân của tôi</footer>
+<p>
+<script>
+    // Nội dung các phần
+    const content = [
+      {
+        title: "Giới thiệu bản thân",
+        text: `
+          Xin chào các bạn,  
+          Tôi tên là <b>[Lâm Quang Minh]</b>, hiện tại tôi đang là một sinh viên năm cuối trường Đại học Công nghệ thành phố Hồ Chí Minh. Tôi thích tìm hiểu về công nghệ thông tin. 
+          Từ nhỏ, tôi đã có một niềm yêu thích đặc biệt với các thiết bị công nghệ, đặc biệt là máy tính. 
+          Những lần được tiếp xúc với các phần mềm, trò chơi, hay các trang web đầu tiên đã để lại trong tôi một sự tò mò mãnh liệt: Làm thế nào để tạo ra được những thứ tuyệt vời như vậy?`
+      },
+      {
+        title: "Lý do học lập trình mạng",
+        text: `
+          Tôi học lập trình mạng vì tôi muốn hiểu rõ cách mà các hệ thống giao tiếp với nhau, từ những giao thức cơ bản như HTTP, TCP/IP cho đến việc triển khai các ứng dụng mạng thực tế. 
+          Tôi hy vọng rằng, với kiến thức về lập trình mạng, tôi có thể tham gia vào việc xây dựng những ứng dụng có tính kết nối cao, giúp cải thiện cuộc sống của mọi người.`
+      },
+      {
+        title: "Lý do học JavaScript",
+        text: `
+          JavaScript là công cụ mạnh mẽ để hiện thực hóa các ý tưởng trên nền tảng web. Từ khi bắt đầu học lập trình, tôi đã nhận ra rằng JavaScript không chỉ là ngôn ngữ phổ biến mà còn là chìa khóa để tạo ra những trải nghiệm người dùng sống động và tương tác. 
+          Với các thư viện và framework như React, Node.js, tôi tin rằng JavaScript sẽ mở ra nhiều cơ hội sáng tạo mới cho tôi.`
+      },
+      {
+        title: "Mục tiêu và ước mơ",
+        text: `
+          Tôi mong muốn sử dụng những kiến thức mình học được để tạo ra các sản phẩm công nghệ hữu ích, giải quyết các vấn đề trong cuộc sống và mang lại giá trị cho cộng đồng.`
+      }
+    ];
+
+    // Hiển thị nội dung
+    const contentDiv = document.getElementById("content");
+    content.forEach(section => {
+      const sectionDiv = document.createElement("div");
+      sectionDiv.classList.add("section");
+
+      const title = document.createElement("h2");
+      title.innerText = section.title;
+
+      const text = document.createElement("p");
+      text.innerHTML = section.text;
+
+      sectionDiv.appendChild(title);
+      sectionDiv.appendChild(text);
+      contentDiv.appendChild(sectionDiv);
+    });
+  </script>
+</p>
             ]]>
         </content>
     </entry>
@@ -41,13 +91,12 @@
         <updated>2024-12-25T21:51:49+07:00</updated>
             <summary>
                 <![CDATA[
-                    Chào mọi người, mình là Lâm Quang Minh! Mình đến từ Đồng Nai, quê gốc mình ở Quản Bình. Hiện tại, mình đang sống và làm việc tại thành phố Hồ Chí Minh. [Viết về đam mê, sở thích]: Mình có niềm đam mê mãnh&hellip;
+                    wevwebews
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <h2 data-sourcepos="5:1-5:42">Chào mọi người, mình là Lâm Quang Minh!</h2>
-<p>Mình đến từ Đồng Nai, quê gốc mình ở Quản Bình. Hiện tại, mình đang sống và làm việc tại thành phố Hồ Chí Minh.<br>[Viết về đam mê, sở thích]: Mình có niềm đam mê mãnh liệt với [Đam mê 1], [Đam mê 2], và đặc biệt là [Đam mê chính]. Mỗi khi có thời gian rảnh, mình thường [Hoạt động liên quan đến đam mê].<br>[Viết về lý do tạo blog]: Mình quyết định tạo ra blog này với mong muốn [Mục tiêu của blog]. Mình hy vọng rằng những chia sẻ của mình sẽ mang lại [Giá trị] cho các bạn.<br>[Viết về những chủ đề sẽ chia sẻ trên blog]: Tại đây, mình sẽ thường xuyên chia sẻ về [Chủ đề 1], [Chủ đề 2], và những câu chuyện thú vị trong cuộc sống.<br>[Kết thúc bằng một lời mời gọi]: Cảm ơn các bạn đã dành thời gian đọc bài viết này. Mình rất mong nhận được sự ủng hộ và những bình luận tích cực từ các bạn. Hãy cùng nhau khám phá và học hỏi nhé!</p>
+                <p>wevwebews<br><br></p>
             ]]>
         </content>
     </entry>

@@ -13,29 +13,29 @@
             "id": "https://github.com/quangminh2k3/my1blog.git/blog-2.html",
             "url": "https://github.com/quangminh2k3/my1blog.git/blog-2.html",
             "title": "Blog 2",
-            "summary": "vưevwevwevewvwes ewvwevwevwevwe",
-            "content_html": "<p>vưevwevwevewvwes</p>\n<p>ewvwevwevwevwe</p>",
+            "summary": "Giới thiệu bản thân © 2024 - Blog cá nhân của tôi",
+            "content_html": "<h1>Giới thiệu bản thân</h1>\n<div id=\"content\"></div>\n<footer>© 2024 - Blog cá nhân của tôi</footer>\n<p>\n<script>\n    // Nội dung các phần\n    const content = [\n      {\n        title: \"Giới thiệu bản thân\",\n        text: `\n          Xin chào các bạn,  \n          Tôi tên là <b>[Lâm Quang Minh]</b>, hiện tại tôi đang là một sinh viên năm cuối trường Đại học Công nghệ thành phố Hồ Chí Minh. Tôi thích tìm hiểu về công nghệ thông tin. \n          Từ nhỏ, tôi đã có một niềm yêu thích đặc biệt với các thiết bị công nghệ, đặc biệt là máy tính. \n          Những lần được tiếp xúc với các phần mềm, trò chơi, hay các trang web đầu tiên đã để lại trong tôi một sự tò mò mãnh liệt: Làm thế nào để tạo ra được những thứ tuyệt vời như vậy?`\n      },\n      {\n        title: \"Lý do học lập trình mạng\",\n        text: `\n          Tôi học lập trình mạng vì tôi muốn hiểu rõ cách mà các hệ thống giao tiếp với nhau, từ những giao thức cơ bản như HTTP, TCP/IP cho đến việc triển khai các ứng dụng mạng thực tế. \n          Tôi hy vọng rằng, với kiến thức về lập trình mạng, tôi có thể tham gia vào việc xây dựng những ứng dụng có tính kết nối cao, giúp cải thiện cuộc sống của mọi người.`\n      },\n      {\n        title: \"Lý do học JavaScript\",\n        text: `\n          JavaScript là công cụ mạnh mẽ để hiện thực hóa các ý tưởng trên nền tảng web. Từ khi bắt đầu học lập trình, tôi đã nhận ra rằng JavaScript không chỉ là ngôn ngữ phổ biến mà còn là chìa khóa để tạo ra những trải nghiệm người dùng sống động và tương tác. \n          Với các thư viện và framework như React, Node.js, tôi tin rằng JavaScript sẽ mở ra nhiều cơ hội sáng tạo mới cho tôi.`\n      },\n      {\n        title: \"Mục tiêu và ước mơ\",\n        text: `\n          Tôi mong muốn sử dụng những kiến thức mình học được để tạo ra các sản phẩm công nghệ hữu ích, giải quyết các vấn đề trong cuộc sống và mang lại giá trị cho cộng đồng.`\n      }\n    ];\n\n    // Hiển thị nội dung\n    const contentDiv = document.getElementById(\"content\");\n    content.forEach(section => {\n      const sectionDiv = document.createElement(\"div\");\n      sectionDiv.classList.add(\"section\");\n\n      const title = document.createElement(\"h2\");\n      title.innerText = section.title;\n\n      const text = document.createElement(\"p\");\n      text.innerHTML = section.text;\n\n      sectionDiv.appendChild(title);\n      sectionDiv.appendChild(text);\n      contentDiv.appendChild(sectionDiv);\n    });\n  </script>\n</p>",
             "author": {
                 "name": "Lâm Quang Minh"
             },
             "tags": [
             ],
             "date_published": "2024-12-25T22:00:27+07:00",
-            "date_modified": "2024-12-25T22:00:27+07:00"
+            "date_modified": "2024-12-26T10:50:19+07:00"
         },
         {
             "id": "https://github.com/quangminh2k3/my1blog.git/blog-01_.html",
             "url": "https://github.com/quangminh2k3/my1blog.git/blog-01_.html",
             "title": "Blog 01_",
-            "summary": "Chào mọi người, mình là Lâm Quang Minh! Mình đến từ Đồng Nai, quê gốc mình ở Quản Bình. Hiện tại, mình đang sống và làm việc tại thành phố Hồ Chí Minh. [Viết về đam mê, sở thích]: Mình có niềm đam mê mãnh&hellip;",
-            "content_html": "<h2 data-sourcepos=\"5:1-5:42\">Chào mọi người, mình là Lâm Quang Minh!</h2>\n<p>Mình đến từ Đồng Nai, quê gốc mình ở Quản Bình. Hiện tại, mình đang sống và làm việc tại thành phố Hồ Chí Minh.<br>[Viết về đam mê, sở thích]: Mình có niềm đam mê mãnh liệt với [Đam mê 1], [Đam mê 2], và đặc biệt là [Đam mê chính]. Mỗi khi có thời gian rảnh, mình thường [Hoạt động liên quan đến đam mê].<br>[Viết về lý do tạo blog]: Mình quyết định tạo ra blog này với mong muốn [Mục tiêu của blog]. Mình hy vọng rằng những chia sẻ của mình sẽ mang lại [Giá trị] cho các bạn.<br>[Viết về những chủ đề sẽ chia sẻ trên blog]: Tại đây, mình sẽ thường xuyên chia sẻ về [Chủ đề 1], [Chủ đề 2], và những câu chuyện thú vị trong cuộc sống.<br>[Kết thúc bằng một lời mời gọi]: Cảm ơn các bạn đã dành thời gian đọc bài viết này. Mình rất mong nhận được sự ủng hộ và những bình luận tích cực từ các bạn. Hãy cùng nhau khám phá và học hỏi nhé!</p>",
+            "summary": "wevwebews",
+            "content_html": "<p>wevwebews<br><br></p>",
             "author": {
                 "name": "Lâm Quang Minh"
             },
             "tags": [
             ],
             "date_published": "2024-12-25T21:51:49+07:00",
-            "date_modified": "2024-12-25T22:53:38+07:00"
+            "date_modified": "2024-12-26T09:55:08+07:00"
         }
     ]
 }
